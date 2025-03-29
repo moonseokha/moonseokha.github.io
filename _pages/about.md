@@ -6,7 +6,7 @@ subtitle: <i class="fa-solid fa-envelope"></i> shmoon96[at]korea[dot]ac[dot]kr
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: 
 
