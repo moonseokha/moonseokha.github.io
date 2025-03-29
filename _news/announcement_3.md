@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper “Who Should Have Been Focused: Transferring Attention-based Knowledge from Future Observations for Trajectory Prediction” has been accepted to ICPR 2024!
+📄✨ Our paper “Who Should Have Been Focused: Transferring Attention-based Knowledge from Future Observations for Trajectory Prediction” has been accepted to ICPR 2024!
