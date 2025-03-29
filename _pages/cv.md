@@ -2,10 +2,10 @@
 layout: cv
 permalink: /cv/
 title: cv
-nav: false
+nav: true
 nav_order: 3
 cv_pdf: cv_seokhamoon.pdf # you can also use external links here
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
+description: 📄 You can find more detailed information about me here.
 toc:
   sidebar: left
 ---

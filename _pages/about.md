@@ -19,6 +19,5 @@ Hi!😀 I'm a Ph.D. Student at Korea University, [Vision & AI lab](https://visio
 
 My research interests lie in the field of Autonomous Robots and Autonomous Driving 🚗 🤖. Recently, I have been focusing on camera-based perception tasks in autonomous driving, including 3D detection and occupancy prediction. I also explored trajectory prediction with an emphasis on modeling interactions between agents, using vision-driven text guidance as supervision to inform the model of relevant contextual cues needed to understand each agent’s situation. 
 
-Currently, I am particularly interested in Vision-Language-Navigation for autonomous robots and end-to-end learning frameworks for autonomous driving.
+Currently, I am particularly interested in Vision-Language Navigation for autonomous robots and End-to-End frameworks for autonomous driving.
 
-For more details, please refer to my CV 📝(/assets/pdf/cv_seokhamoon.pdf).
