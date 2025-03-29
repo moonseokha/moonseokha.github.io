@@ -12,6 +12,46 @@
       "countryCode": "KR"
     }
   },
+  "education": [
+    {
+      "institution": "Korea University",
+      "location": "Seoul, South Korea",
+      "url": "https://www.korea.ac.kr",
+      "area": "AI Applications",
+      "studyType": "Ph.D.",
+      "startDate": "2022-09-01",
+      "score": "GPA: 4.37/4.5",
+      "courses": ["Advisor: Prof. Jinkyu Kim"]
+    },
+    {
+      "institution": "Yonsei University",
+      "location": "Seoul, South Korea",
+      "url": "https://www.yonsei.ac.kr",
+      "area": "Computer Science",
+      "studyType": "Bachelor's",
+      "startDate": "2016-03-01",
+      "endDate": "2022-08-31",
+      "score": "Overall GPA: 3.67/4.3, Major GPA: 3.97/4.5",
+      "courses": [
+        "Operating Systems", "Computer Architecture", "Algorithms", "Data Structures",
+        "Artificial Intelligence", "Computer Graphics", "Object-Oriented Programming", "Theory of Computation"
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Autonomous Driving and Robot",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Camera-based 3D Object Detection",
+        "Camera-based 3D Occupancy Prediction",
+        "Trajectory Prediction",
+        "End-to-End Autonomous Driving",
+        "Vision-Language Navigation",
+        "LLM-based Reasoning for Autonomous Agents"
+      ]
+    }
+  ],
   "work": [
     {
       "name": "NAVER LABS",
@@ -63,30 +103,55 @@
       ]
     }
   ],
-  "education": [
+  "publications": [
     {
-      "institution": "Korea University",
-      "location": "Seoul, South Korea",
-      "url": "https://www.korea.ac.kr",
-      "area": "Computer Science and Artificial Intelligence",
-      "studyType": "Ph.D.",
-      "startDate": "2022-09-01",
-      "score": "GPA: 4.37/4.5",
-      "professor": "Jinkyu Kim"
+      "name": "Mitigating Trade-off: Stream and Query-guided Aggregation for Efficient and Effective 3D Occupancy Prediction",
+      "publisher": "Seokha Moon, Janghyun Baek, Giseop Kim, Jinkyu Kim, Sunwook Choi \\arXiv Preprint",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2407.12345",
+      "summary": "StreamOcc introduces a real-time 3D occupancy prediction framework that combines stream-based voxel aggregation and query-guided refinement to improve both efficiency and accuracy."
     },
     {
-      "institution": "Yonsei University",
-      "location": "Seoul, South Korea",
-      "url": "https://www.yonsei.ac.kr",
-      "area": "Computer Science",
-      "studyType": "Bachelor's",
-      "startDate": "2016-03-01",
-      "endDate": "2022-08-31",
-      "score": "Overall GPA: 3.67/4.3, Major GPA: 3.97/4.5",
-      "courses": [
-        "Operating Systems", "Computer Architecture", "Algorithms", "Data Structures",
-        "Artificial Intelligence", "Computer Graphics", "Object-Oriented Programming", "Theory of Computation"
-      ]
+      "name": "VisionTrap: Vision-Augmented Trajectory Prediction Guided by Textual Descriptions",
+      "publisher": "Seokha Moon, Hyun Woo, Hongbeen Park, Haeji Jung, Reza Mahjourian, Hyung-gun Chi, Hyerin Lim, Sangpil Kim, Jinkyu Kim \\European Conference on Computer Vision (ECCV)",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2407.12345",
+      "summary": "VisionTrap leverages vision-language supervision to enhance trajectory prediction by guiding the model on what to focus on for better understanding of agent behavior."
+    },
+    {
+      "name": "Who Should Have Been Focused: Transferring Attention-based Knowledge from Future Observations for Trajectory Prediction",
+      "publisher": "Seokha Moon, Kyuhwan Yeon, Hayoung Kim, Seong-Gyun Jeong, Jinkyu Kim \\International Conference on Pattern Recognition (ICPR)",
+      "year": 2024,
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-78447-7_23",
+      "summary": "Proposes an attention-guided knowledge distillation framework that uses future observations to help the model attend to the most relevant agents during trajectory prediction."
+    },
+    {
+      "name": "Learning Temporal Cues by Predicting Objects Move for Multi-camera 3D Object Detection",
+      "publisher": "Seokha Moon, Hongbeen Park, Jungphil Kwon, Jaekoo Lee, Jinkyu Kim \\IEEE International Conference on Robotics and Automation (ICRA)",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2404.01580",
+      "summary": "Introduces the Detection After Prediction (DAP) strategy that uses motion prediction as an auxiliary task to help learn temporal cues for 3D object detection from multi-camera input."
+    },
+    {
+      "name": "BEVMap: Map-Aware BEV Modeling for 3D Perception",
+      "publisher": "Mincheol Chang, Seokha Moon, Reza Mahjourian, Jinkyu Kim \\IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+      "year": 2024,
+      "url": "https://openaccess.thecvf.com/content/WACV2024/html/Chang_BEVMap_Map-Aware_BEV_Modeling_for_3D_Perception_WACV_2024_paper.html",
+      "summary": "Proposes a map-aware BEV representation that improves 3D perception by incorporating spatial priors from HD maps and camera-map projection alignment."
+    },
+    {
+      "name": "RUFI: Reducing Uncertainty in behavior prediction with Future Information",
+      "publisher": "Seokha Moon, Sejeong Lee, Hyun Woo, Kyuhwan Yeon, Hayoung Kim, Seong-Gyun Jeong, Jinkyu Kim \\CVPR Workshop on Vision-Centric Autonomous Driving (VCAD)",
+      "year": 2023,
+      "url": "",
+      "summary": "RUFI improves behavior prediction by leveraging future information as privileged knowledge to reduce trajectory uncertainty during training."
+    },
+    {
+      "name": "ORA3D: Overlap Region Aware Multi-view 3D Object Detection",
+      "publisher": "Wonseok Roh, Gyusam Chang, Seokha Moon, Giljoo Nam, Chanyoung Kim, Younghyun Kim, Jinkyu Kim, Sangpil Kim \\British Machine Vision Conference (BMVC)",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2207.00865",
+      "summary": "ORA3D addresses performance drops in overlapping camera views by applying weak depth supervision and feature alignment across overlapping regions."
     }
   ],
   "awards": [
@@ -101,78 +166,6 @@
       "date": "2020-11-01",
       "awarder": "Talent Development Foundation",
       "summary": "Awarded for academic excellence and potential in technology research."
-    }
-  ],
-  "publications": [
-    {
-      "name": "Mitigating Trade-off: Stream and Query-guided Aggregation for Efficient and Effective 3D Occupancy Prediction",
-      "publisher": "arXiv Preprint",
-      "year": 2025,
-      "url": "https://arxiv.org/abs/2407.12345",
-      "authors": "Seokha Moon, Janghyun Baek, Giseop Kim, Jinkyu Kim, Sunwook Choi",
-      "summary": "StreamOcc introduces a real-time 3D occupancy prediction framework that combines stream-based voxel aggregation and query-guided refinement to improve both efficiency and accuracy."
-    },
-    {
-      "name": "VisionTrap: Vision-Augmented Trajectory Prediction Guided by Textual Descriptions",
-      "publisher": "European Conference on Computer Vision (ECCV)",
-      "year": 2024,
-      "url": "https://arxiv.org/abs/2407.12345",
-      "authors": "Seokha Moon, Hyun Woo, Hongbeen Park, Haeji Jung, Reza Mahjourian, Hyung-gun Chi, Hyerin Lim, Sangpil Kim, Jinkyu Kim",
-      "summary": "VisionTrap leverages vision-language supervision to enhance trajectory prediction by guiding the model on what to focus on for better understanding of agent behavior."
-    },
-    {
-      "name": "Who Should Have Been Focused: Transferring Attention-based Knowledge from Future Observations for Trajectory Prediction",
-      "publisher": "International Conference on Pattern Recognition (ICPR)",
-      "year": 2024,
-      "url": "https://link.springer.com/chapter/10.1007/978-3-031-78447-7_23",
-      "authors": "Seokha Moon, Kyuhwan Yeon, Hayoung Kim, Seong-Gyun Jeong, Jinkyu Kim",
-      "summary": "Proposes an attention-guided knowledge distillation framework that uses future observations to help the model attend to the most relevant agents during trajectory prediction."
-    },
-    {
-      "name": "Learning Temporal Cues by Predicting Objects Move for Multi-camera 3D Object Detection",
-      "publisher": "IEEE International Conference on Robotics and Automation (ICRA)",
-      "year": 2024,
-      "url": "https://arxiv.org/abs/2404.01580",
-      "authors": "Seokha Moon, Hongbeen Park, Jungphil Kwon, Jaekoo Lee, Jinkyu Kim",
-      "summary": "Introduces the Detection After Prediction (DAP) strategy that uses motion prediction as an auxiliary task to help learn temporal cues for 3D object detection from multi-camera input."
-    },
-    {
-      "name": "BEVMap: Map-Aware BEV Modeling for 3D Perception",
-      "publisher": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
-      "year": 2024,
-      "url": "https://openaccess.thecvf.com/content/WACV2024/html/Chang_BEVMap_Map-Aware_BEV_Modeling_for_3D_Perception_WACV_2024_paper.html",
-      "authors": "Mincheol Chang, Seokha Moon, Reza Mahjourian, Jinkyu Kim",
-      "summary": "Proposes a map-aware BEV representation that improves 3D perception by incorporating spatial priors from HD maps and camera-map projection alignment."
-    },
-    {
-      "name": "RUFI: Reducing Uncertainty in behavior prediction with Future Information",
-      "publisher": "CVPR Workshop on Vision-Centric Autonomous Driving (VCAD)",
-      "year": 2023,
-      "url": "",
-      "authors": "Seokha Moon, Sejeong Lee, Hyun Woo, Kyuhwan Yeon, Hayoung Kim, Seong-Gyun Jeong, Jinkyu Kim",
-      "summary": "RUFI improves behavior prediction by leveraging future information as privileged knowledge to reduce trajectory uncertainty during training."
-    },
-    {
-      "name": "ORA3D: Overlap Region Aware Multi-view 3D Object Detection",
-      "publisher": "British Machine Vision Conference (BMVC)",
-      "year": 2022,
-      "url": "https://arxiv.org/abs/2207.00865",
-      "authors": "Wonseok Roh, Gyusam Chang, Seokha Moon, Giljoo Nam, Chanyoung Kim, Younghyun Kim, Jinkyu Kim, Sangpil Kim",
-      "summary": "ORA3D addresses performance drops in overlapping camera views by applying weak depth supervision and feature alignment across overlapping regions."
-    }
-  ],
-  "interests": [
-    {
-      "name": "Autonomous Driving and Robot",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Camera-based 3D Object Detection",
-        "Camera-based 3D Occupancy Prediction",
-        "Trajectory Prediction",
-        "End-to-End Autonomous Driving",
-        "Vision-Language Navigation",
-        "LLM-based Reasoning for Autonomous Agents"
-      ]
     }
   ]
 }
