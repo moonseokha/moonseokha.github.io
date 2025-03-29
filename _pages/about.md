@@ -3,8 +3,6 @@ layout: about
 title: about
 permalink: /
 subtitle: <i class="fa-solid fa-envelope"></i> shmoon96[at]korea[dot]ac[dot]kr
-nav: true
-nav_order: 1
 
 profile:
   align: right
