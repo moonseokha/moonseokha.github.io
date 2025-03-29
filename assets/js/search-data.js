@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "📄 You can find more detailed information about me here.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -425,19 +425,19 @@ ninja.data = [{
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
             },},{id: "news-our-paper-learning-temporal-cues-by-predicting-objects-move-for-multi-camera-3d-object-detection-has-been-accepted-to-icra-2024",
-          title: 'Our paper “Learning Temporal Cues by Predicting Objects Move for Multi-camera 3D Object...',
+          title: '📄✨ Our paper “Learning Temporal Cues by Predicting Objects Move for Multi-camera 3D...',
           description: "",
           section: "News",},{id: "news-our-paper-visiontrap-vision-augmented-trajectory-prediction-guided-by-textual-descriptions-has-been-accepted-to-eccv-2024",
-          title: 'Our paper “VisionTrap: Vision-Augmented Trajectory Prediction Guided by Textual Descriptions” has been accepted...',
+          title: '📄✨ Our paper “VisionTrap: Vision-Augmented Trajectory Prediction Guided by Textual Descriptions” has been...',
           description: "",
           section: "News",},{id: "news-our-paper-who-should-have-been-focused-transferring-attention-based-knowledge-from-future-observations-for-trajectory-prediction-has-been-accepted-to-icpr-2024",
-          title: 'Our paper “Who Should Have Been Focused: Transferring Attention-based Knowledge from Future Observations...',
+          title: '📄✨ Our paper “Who Should Have Been Focused: Transferring Attention-based Knowledge from Future...',
           description: "",
           section: "News",},{id: "news-started-a-research-internship-at-naver-labs-focusing-on-real-time-3d-occupancy-prediction-for-autonomous-driving",
-          title: 'Started a research internship at NAVER LABS, focusing on real-time 3D occupancy prediction...',
+          title: '💼 Started a research internship at NAVER LABS, focusing on real-time 3D occupancy...',
           description: "",
           section: "News",},{id: "news-our-paper-mitigating-trade-off-stream-and-query-guided-aggregation-for-efficient-and-effective-3d-occupancy-prediction-has-been-released-on-arxiv-the-work-was-done-during-my-internship-at-naver-labs",
-          title: 'Our paper “Mitigating Trade-off: Stream and Query-guided Aggregation for Efficient and Effective 3D...',
+          title: '💼📄 Our paper “Mitigating Trade-off: Stream and Query-guided Aggregation for Efficient and Effective...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
