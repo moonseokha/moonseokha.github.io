@@ -21,9 +21,8 @@
       "endDate": "2025-03-01",
       "summary": "Worked on real-time 3D occupancy prediction for autonomous driving. Developed StreamOcc, an efficient voxel-based method achieving state-of-the-art performance with reduced latency and memory usage.",
       "highlights": [
-        "Designed StreamOcc, an efficient 3D occupancy prediction model.",
-        "Achieved real-time performance (83.3ms) while reducing memory usage by 50%+.",
-        "Outperformed multi-frame fusion approaches on Occ3D-nuScenes."
+        "Designed StreamOcc, an efficient yet effective 3D occupancy prediction model.",
+        "Achieved real-time performance while reducing memory usage."
       ]
     },
     {
