@@ -350,7 +350,9 @@
         <p>{{ entry.abstract }}</p>
       </div>
     {% endif %}
-
+    {% if entry.paper %}
+        <a href="{{ entry.paper }}" class="btn btn-sm z-depth-0" role="button">Paper</a>
+    {% endif %}
     {% if entry.bibtex_show %}
       <!-- Hidden bibtex block -->
       <div class="bibtex hidden">
