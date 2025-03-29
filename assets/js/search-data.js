@@ -380,6 +380,39 @@ ninja.data = [{
             window.location.href = "/al-folio/blog/2020/twitter/";
           
         },
+      },{id: "post-welcome",
+        
+          title: "Welcome",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/al-folio/blog/2018/welcome/";
+          
+        },
+      },{id: "post-welcome",
+        
+          title: "Welcome",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/al-folio/blog/2018/welcome/";
+          
+        },
+      },{id: "post-post-with-header-image",
+        
+          title: "Post with Header Image",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/al-folio/blog/2018/header-image/";
+          
+        },
       },{id: "post-a-post-with-disqus-comments",
         
           title: "a post with disqus comments",
