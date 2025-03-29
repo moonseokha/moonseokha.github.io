@@ -105,49 +105,49 @@
   "publications": [
     {
       "name": "Mitigating Trade-off: Stream and Query-guided Aggregation for Efficient and Effective 3D Occupancy Prediction",
-      "publisher": "Seokha Moon, Janghyun Baek, Giseop Kim, Jinkyu Kim, Sunwook Choi <br>arXiv Preprint",
+      "publisher": "Seokha Moon, Janghyun Baek, Giseop Kim, Jinkyu Kim, Sunwook Choi <br><br>arXiv Preprint",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2407.12345",
       "summary": "StreamOcc introduces a real-time 3D occupancy prediction framework that combines stream-based voxel aggregation and query-guided refinement to improve both efficiency and accuracy."
     },
     {
       "name": "VisionTrap: Vision-Augmented Trajectory Prediction Guided by Textual Descriptions",
-      "publisher": "Seokha Moon, Hyun Woo, Hongbeen Park, Haeji Jung, Reza Mahjourian, Hyung-gun Chi, Hyerin Lim, Sangpil Kim, Jinkyu Kim <br>European Conference on Computer Vision (ECCV)",
+      "publisher": "Seokha Moon, Hyun Woo, Hongbeen Park, Haeji Jung, Reza Mahjourian, Hyung-gun Chi, Hyerin Lim, Sangpil Kim, Jinkyu Kim <br><br>European Conference on Computer Vision (ECCV)",
       "releaseDate": "2024",
       "url": "https://arxiv.org/abs/2407.12345",
       "summary": "VisionTrap leverages vision-language supervision to enhance trajectory prediction by guiding the model on what to focus on for better understanding of agent behavior."
     },
     {
       "name": "Who Should Have Been Focused: Transferring Attention-based Knowledge from Future Observations for Trajectory Prediction",
-      "publisher": "Seokha Moon, Kyuhwan Yeon, Hayoung Kim, Seong-Gyun Jeong, Jinkyu Kim <br>International Conference on Pattern Recognition (ICPR)",
+      "publisher": "Seokha Moon, Kyuhwan Yeon, Hayoung Kim, Seong-Gyun Jeong, Jinkyu Kim <br><br>International Conference on Pattern Recognition (ICPR)",
       "releaseDate": "2024",
       "url": "https://link.springer.com/chapter/10.1007/978-3-031-78447-7_23",
       "summary": "Proposes an attention-guided knowledge distillation framework that uses future observations to help the model attend to the most relevant agents during trajectory prediction."
     },
     {
       "name": "Learning Temporal Cues by Predicting Objects Move for Multi-camera 3D Object Detection",
-      "publisher": "Seokha Moon, Hongbeen Park, Jungphil Kwon, Jaekoo Lee, Jinkyu Kim <br>IEEE International Conference on Robotics and Automation (ICRA)",
+      "publisher": "Seokha Moon, Hongbeen Park, Jungphil Kwon, Jaekoo Lee, Jinkyu Kim <br><br>IEEE International Conference on Robotics and Automation (ICRA)",
       "releaseDate": "2024",
       "url": "https://arxiv.org/abs/2404.01580",
       "summary": "Introduces the Detection After Prediction (DAP) strategy that uses motion prediction as an auxiliary task to help learn temporal cues for 3D object detection from multi-camera input."
     },
     {
       "name": "BEVMap: Map-Aware BEV Modeling for 3D Perception",
-      "publisher": "Mincheol Chang, Seokha Moon, Reza Mahjourian, Jinkyu Kim <br>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+      "publisher": "Mincheol Chang, Seokha Moon, Reza Mahjourian, Jinkyu Kim <br><br>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
       "releaseDate": "2024",
       "url": "https://openaccess.thecvf.com/content/WACV2024/html/Chang_BEVMap_Map-Aware_BEV_Modeling_for_3D_Perception_WACV_2024_paper.html",
       "summary": "Proposes a map-aware BEV representation that improves 3D perception by incorporating spatial priors from HD maps and camera-map projection alignment."
     },
     {
       "name": "RUFI: Reducing Uncertainty in behavior prediction with Future Information",
-      "publisher": "Seokha Moon, Sejeong Lee, Hyun Woo, Kyuhwan Yeon, Hayoung Kim, Seong-Gyun Jeong, Jinkyu Kim CVPR Workshop on Vision-Centric Autonomous Driving (VCAD)",
+      "publisher": "Seokha Moon, Sejeong Lee, Hyun Woo, Kyuhwan Yeon, Hayoung Kim, Seong-Gyun Jeong, Jinkyu Kim <br><br>CVPR Workshop on Vision-Centric Autonomous Driving (VCAD)",
       "releaseDate": "2023",
       "url": "",
       "summary": "RUFI improves behavior prediction by leveraging future information as privileged knowledge to reduce trajectory uncertainty during training."
     },
     {
       "name": "ORA3D: Overlap Region Aware Multi-view 3D Object Detection",
-      "publisher": "Wonseok Roh, Gyusam Chang, Seokha Moon, Giljoo Nam, Chanyoung Kim, Younghyun Kim, Jinkyu Kim, Sangpil Kim <br>British Machine Vision Conference (BMVC)",
+      "publisher": "Wonseok Roh, Gyusam Chang, Seokha Moon, Giljoo Nam, Chanyoung Kim, Younghyun Kim, Jinkyu Kim, Sangpil Kim <br><br>British Machine Vision Conference (BMVC)",
       "releaseDate": "2022",
       "url": "https://arxiv.org/abs/2207.00865",
       "summary": "ORA3D addresses performance drops in overlapping camera views by applying weak depth supervision and feature alignment across overlapping regions."
