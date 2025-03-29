@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-📄✨ Our paper “Learning Temporal Cues by Predicting Objects Move for Multi-camera 3D Object Detection” has been accepted to ICRA 2024!
+📄✨ Our paper [“Learning Temporal Cues by Predicting Objects Move for Multi-camera 3D Object Detection”](https://arxiv.org/abs/2404.01580) has been accepted to ICRA 2024!
