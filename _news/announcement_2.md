@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-📄✨ Our paper [“VisionTrap: Vision-Augmented Trajectory Prediction Guided by Textual Descriptions”](https://arxiv.org/abs/2407.12345) has been accepted to ECCV 2024!
+📄✨ Our paper **“VisionTrap: Vision-Augmented Trajectory Prediction Guided by Textual Descriptions”** has been accepted to **ECCV 2024**!
