@@ -424,16 +424,20 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-our-paper-learning-temporal-cues-by-predicting-objects-move-for-multi-camera-3d-object-detection-has-been-accepted-to-icra-2024",
+          title: 'Our paper “Learning Temporal Cues by Predicting Objects Move for Multi-camera 3D Object...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-our-paper-visiontrap-vision-augmented-trajectory-prediction-guided-by-textual-descriptions-has-been-accepted-to-eccv-2024",
+          title: 'Our paper “VisionTrap: Vision-Augmented Trajectory Prediction Guided by Textual Descriptions” has been accepted...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-our-paper-who-should-have-been-focused-transferring-attention-based-knowledge-from-future-observations-for-trajectory-prediction-has-been-accepted-to-icpr-2024",
+          title: 'Our paper “Who Should Have Been Focused: Transferring Attention-based Knowledge from Future Observations...',
+          description: "",
+          section: "News",},{id: "news-started-a-research-internship-at-naver-labs-focusing-on-real-time-3d-occupancy-prediction-for-autonomous-driving",
+          title: 'Started a research internship at NAVER LABS, focusing on real-time 3D occupancy prediction...',
+          description: "",
+          section: "News",},{id: "news-our-paper-mitigating-trade-off-stream-and-query-guided-aggregation-for-efficient-and-effective-3d-occupancy-prediction-has-been-released-on-arxiv-the-work-was-done-during-my-internship-at-naver-labs",
+          title: 'Our paper “Mitigating Trade-off: Stream and Query-guided Aggregation for Efficient and Effective 3D...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
