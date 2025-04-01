@@ -107,7 +107,7 @@
       "name": "Mitigating Trade-off: Stream and Query-guided Aggregation for Efficient and Effective 3D Occupancy Prediction",
       "publisher": "Seokha Moon, Janghyun Baek, Giseop Kim, Jinkyu Kim, Sunwook Choi <br><br>arXiv Preprint",
       "releaseDate": "2025",
-      "url": "https://arxiv.org/abs/2407.12345",
+      "url": "https://arxiv.org/abs/2503.22087",
       "summary": "StreamOcc introduces a real-time 3D occupancy prediction framework that combines stream-based voxel aggregation and query-guided refinement to improve both efficiency and accuracy."
     },
     {
