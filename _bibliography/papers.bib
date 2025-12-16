@@ -1,27 +1,62 @@
 ---
 ---
+@article{imagepg,
+    abbr = "WACV",
+    title = {Image-Guided Semantic Pseudo-LiDAR Point Generation for 3D Object Detection},
+    author = {Lee, Minseung and Moon, Seokha and Mahjourian, Reza and Kim, Jinkyu},
+    year = {2026},
+    journal={Winter Conference on Applications of Computer Vision (WACV)},
+    paper={https://arxiv.org/abs/2409.14985},
+    preview={IMAGEPG.png},
+    selected = {true},
+    code={https://github.com/MS-LIMA/ImagePG},
+    abstract = {In autonomous driving scenarios, accurate perception is becoming an even more critical task for safe navigation. 
+    While LiDAR provides precise spatial data, its inherent sparsity makes it difficult to detect small or distant objects. 
+    Existing methods try to address this by generating additional points within a Region of Interest (RoI), but relying on LiDAR alone often leads to false positives and a failure to recover meaningful structures. 
+    To address these limitations, we propose Image-Guided Semantic Pseudo-LiDAR Point Generation model, called ImagePG, a novel framework that leverages rich RGB image features to generate dense and semantically meaningful 3D points. 
+    Our framework includes an Image-Guided RoI Points Generation (IG-RPG) module, which creates pseudo-points guided by image features, and an Image-Aware Occupancy Prediction Network (I-OPN), which provides spatial priors to guide point placement. 
+    A multi-stage refinement (MR) module further enhances point quality and detection robustness. To the best of our knowledge, ImagePG is the first method to directly leverage image features for point generation. 
+    Extensive experiments on the KITTI and Waymo datasets demonstrate that ImagePG significantly improves the detection of small and distant objects like pedestrians and cyclists, reducing false positives by nearly 50%. 
+    On the KITTI benchmark, our framework improves mAP by +1.38%p (car), +7.91%p (pedestrian), and +5.21%p (cyclist) on the test set over the baseline, achieving state-of-the-art cyclist performance on the KITTI leaderboard.}
+}
 
-@article{streamocc,
+@article{superad,
     abbr = "Preprint",
-    title = {Mitigating Trade-off: Stream and Query-guided Aggregation for Efficient and Effective 3D Occupancy Prediction},
+    title = {SUPER-AD: Semantic Uncertainty-aware Planning for End-to-End Robust Autonomous Driving},
+    author = {Ryu, Wonjeong and Yu, Seungjun and Moon, Seokha and Choi, Hojun and Park, Junsung and Kim, Jinkyu and Shim, Hyunjung},
+    year = {2025},
+    journal={Arxiv Preprint},
+    paper={https://arxiv.org/abs/2511.22865},
+    preview={SUPERAD.png},
+    selected = {true},
+    abstract = {End-to-End (E2E) planning has become a powerful paradigm for autonomous driving, yet current systems remain fundamentally uncertainty-blind. 
+   They assume perception outputs are fully reliable, even in ambiguous or poorly observed scenes, leaving the planner without an explicit measure of uncertainty. 
+   To address this limitation, we propose a camera-only E2E framework that estimates aleatoric uncertainty directly in BEV space and incorporates it into planning. 
+   Our method produces a dense, uncertainty-aware drivability map that captures both semantic structure and geometric layout at pixel-level resolution. 
+   To further promote safe and rule-compliant behavior, we introduce a lane-following regularization that encodes lane structure and traffic norms. 
+   This prior stabilizes trajectory planning under normal conditions while preserving the flexibility needed for maneuvers such as overtaking or lane changes. 
+   Together, these components enable robust and interpretable trajectory planning, even under challenging uncertainty conditions. 
+   Evaluated on the NAVSIM benchmark, our method achieves state-of-the-art performance, delivering substantial gains on both the challenging NAVHARD and NAVSAFE subsets. 
+   These results demonstrate that our principled aleatoric uncertainty modeling combined with driving priors significantly advances the safety and reliability of camera-only E2E autonomous driving.}
+}
+
+@article{duocc,
+    abbr = "Preprint",
+    title = {Stream and Query-guided Feature Aggregation for Efficient and Effective 3D Occupancy Prediction},
     author = {Moon, Seokha and Baek, Janghyun and Kim, Giseop and Kim, Jinkyu and Choi, Sunwook},
     year = {2025},
     journal={Arxiv Preprint},
     paper={https://arxiv.org/abs/2503.22087},
-    preview={STREAMOCC.png},
+    preview={DUOCC.png},
     selected = {true},
-    code={https://github.com/moonseokha/StreamOcc},
-    abstract = {3D occupancy prediction has emerged as a key perception task for autonomous driving, as it reconstructs 3D environments to provide a comprehensive scene understanding. 
-    Recent studies focus on integrating spatiotemporal information obtained from past observations to improve prediction accuracy, 
-    using a multi-frame fusion approach that processes multiple past frames together. 
-    However, these methods struggle with a trade-off between efficiency and accuracy, 
-    which significantly limits their practicality. 
-    To mitigate this trade-off, we propose StreamOcc, a novel framework that aggregates spatio-temporal information in a stream-based manner. 
-    StreamOcc consists of two key components: (i) Stream-based Voxel Aggregation, which effectively accumulates past observations while minimizing computational costs, 
-    and (ii) Query-guided Aggregation, which recurrently aggregates instance-level features of dynamic objects into corresponding voxel features, refining fine-grained details of dynamic objects. 
-    Experiments on the Occ3D-nuScenes dataset show that StreamOcc achieves state-of-the-art performance in real-time settings, while reducing memory usage by more than 50% compared to previous methods.}
+    code={https://github.com/moonseokha/duocc},
+    abstract = {3D occupancy prediction has become a key perception task in autonomous driving, as it enables comprehensive scene understanding. 
+    Recent methods enhance this understanding by incorporating spatiotemporal information through multi-frame fusion, but they suffer from a trade-off: dense voxel-based representations provide high accuracy at significant computational cost, whereas sparse representations improve efficiency but lose spatial detail. 
+    To mitigate this trade-off, we introduce DuOcc, which employs a dual aggregation strategy that retains dense voxel representations to preserve spatial fidelity while maintaining high efficiency. 
+    DuOcc consists of two key components: (i) Stream-based Voxel Aggregation, which recurrently accumulates voxel features over time and refines them to suppress warping-induced distortions, preserving a clear separation between occupied and free space. 
+    (ii) Query-guided Aggregation, which complements the limitations of voxel accumulation by selectively injecting instance-level query features into the voxel regions occupied by dynamic objects. 
+Experiments on the widely used Occ3D-nuScenes and SurroundOcc datasets demonstrate that DuOcc achieves state-of-the-art performance in real-time settings, while reducing memory usage by over 40% compared to prior methods.}
 }
-
 
 @article{visiontrap,
     abbr = "ECCV",
