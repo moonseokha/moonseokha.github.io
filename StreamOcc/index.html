@@ -59,11 +59,7 @@
 
     <section class="section teaser">
       <div class="figure-frame">
-        <div class="pdf-embed" style="--ratio: 1109 / 437;">
-          <object data="assets/source/teaser.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="StreamOcc overview comparing naive dense voxel streaming with StreamAgg and QueryAgg">
-            <img src="assets/teaser.png" width="1109" height="437" alt="StreamOcc overview comparing naive dense voxel streaming with StreamAgg and QueryAgg">
-          </object>
-        </div>
+        <img src="assets/teaser.png?v=2" width="1138" height="456" alt="StreamOcc overview comparing naive dense voxel streaming with StreamAgg and QueryAgg">
       </div>
       <div class="caption">
         StreamOcc addresses two failure modes of naive dense voxel streaming: warping distortion from temporal alignment
@@ -107,11 +103,7 @@
 
     <section class="section method">
       <h2>Method</h2>
-      <div class="figure pdf-embed" style="--ratio: 954 / 481;">
-        <object data="assets/source/method.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="Overall architecture of StreamOcc">
-          <img src="assets/method.png" width="954" height="481" alt="Overall architecture of StreamOcc">
-        </object>
-      </div>
+      <img class="figure" src="assets/method.png?v=2" width="1120" height="576" alt="Overall architecture of StreamOcc">
       <div class="caption">
         StreamOcc predicts voxel occupancy in a streaming manner through two aggregation stages: StreamAgg for temporal
         dense voxel accumulation and QueryAgg for targeted dynamic-object refinement.
@@ -136,11 +128,7 @@
         </article>
       </div>
 
-      <div class="figure spaced pdf-embed" style="--ratio: 866 / 254;">
-        <object data="assets/source/adaptive_refinement.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="Adaptive residual refinement module in StreamAgg">
-          <img src="assets/adaptive_refinement.png" width="866" height="254" alt="Adaptive residual refinement module in StreamAgg">
-        </object>
-      </div>
+      <img class="figure spaced" src="assets/adaptive_refinement.png?v=2" width="1088" height="324" alt="Adaptive residual refinement module in StreamAgg">
       <div class="caption">
         Adaptive residual refinement focuses correction on informative warped voxel features using geometry-aware attention.
       </div>
@@ -184,7 +172,7 @@
           <div class="qual-tabs" aria-label="Qualitative result selector">
             <button class="active" type="button" data-qual-tab="0">SOTA</button>
             <button type="button" data-qual-tab="1">QueryAgg</button>
-            <button type="button" data-qual-tab="2">Vox2Query</button>
+            <button type="button" data-qual-tab="2">Dynamic</button>
             <button type="button" data-qual-tab="3">Fig. 7</button>
             <button type="button" data-qual-tab="4">Fig. 8</button>
             <button type="button" data-qual-tab="5">Fig. 9</button>
@@ -196,81 +184,49 @@
 
         <article class="qual-slide active">
           <div class="figure-frame">
-            <div class="pdf-embed" style="--ratio: 407 / 218;">
-              <object data="assets/source/qualitative_sota.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="Qualitative comparison between StreamOcc and ALOcc-mini">
-                <img src="assets/qualitative_sota.png" width="407" height="218" alt="Qualitative comparison between StreamOcc and ALOcc-mini">
-              </object>
-            </div>
+            <img src="assets/qualitative_sota.png?v=2" width="1148" height="602" alt="Qualitative comparison between StreamOcc and ALOcc-mini">
           </div>
           <div class="caption">Comparison with the prior real-time method on 3D occupancy reconstruction.</div>
         </article>
         <article class="qual-slide">
           <div class="figure-frame">
-            <div class="pdf-embed" style="--ratio: 458 / 248;">
-              <object data="assets/source/queryagg_effect.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="Effect of QueryAgg on distant, overlapped, and occluded dynamic objects">
-                <img src="assets/queryagg_effect.png" width="458" height="248" alt="Effect of QueryAgg on distant, overlapped, and occluded dynamic objects">
-              </object>
-            </div>
+            <img src="assets/queryagg_effect.png?v=2" width="1118" height="574" alt="Effect of QueryAgg on distant, overlapped, and occluded dynamic objects">
           </div>
           <div class="caption">QueryAgg improves distant, overlapped, and occluded dynamic-object predictions.</div>
         </article>
         <article class="qual-slide">
           <div class="figure-frame">
-            <div class="pdf-embed" style="--ratio: 696 / 229;">
-              <object data="assets/source/vox2query.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="Voxel-to-query refinement examples in StreamOcc">
-                <img src="assets/visual_dynamic.png" width="696" height="229" alt="Voxel-to-query refinement examples in StreamOcc">
-              </object>
-            </div>
+            <img src="assets/visual_dynamic.png?v=3" width="1120" height="570" alt="StreamOcc visualizations in dynamic and crowded urban scenes">
           </div>
-          <div class="caption">Voxel-to-query refinement injects dynamic-object cues into occupied voxel regions.</div>
+          <div class="caption">Additional 3D occupancy visualizations across dynamic urban scenes.</div>
         </article>
         <article class="qual-slide">
           <div class="figure-frame">
-            <div class="pdf-embed" style="--ratio: 558 / 284;">
-              <object data="assets/source/qualitative_fig7.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="Visualization results of StreamOcc across three distinct scenarios">
-                <img src="assets/qualitative_fig7.png" width="558" height="284" alt="Visualization results of StreamOcc across three distinct scenarios">
-              </object>
-            </div>
+            <img src="assets/qualitative_fig7.png?v=1" width="1483" height="700" alt="Visualization results of StreamOcc across three distinct scenarios">
           </div>
           <div class="caption">Ablation visualization comparing ground truth, without QueryAgg, with QueryAgg, and image detections.</div>
         </article>
         <article class="qual-slide">
           <div class="figure-frame">
-            <div class="pdf-embed" style="--ratio: 613 / 308;">
-              <object data="assets/source/qualitative_fig8.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="3D occupancy prediction in a dynamic urban scene with construction and pedestrians">
-                <img src="assets/qualitative_fig8.png" width="613" height="308" alt="3D occupancy prediction in a dynamic urban scene with construction and pedestrians">
-              </object>
-            </div>
+            <img src="assets/qualitative_fig8.png?v=1" width="1458" height="710" alt="3D occupancy prediction in a dynamic urban scene with construction and pedestrians">
           </div>
           <div class="caption">Dynamic urban scene with construction and pedestrians.</div>
         </article>
         <article class="qual-slide">
           <div class="figure-frame">
-            <div class="pdf-embed" style="--ratio: 612 / 307;">
-              <object data="assets/source/qualitative_fig9.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="3D occupancy prediction at a crowded intersection on a rainy day">
-                <img src="assets/qualitative_fig9.png" width="612" height="307" alt="3D occupancy prediction at a crowded intersection on a rainy day">
-              </object>
-            </div>
+            <img src="assets/qualitative_fig9.png?v=1" width="1458" height="710" alt="3D occupancy prediction at a crowded intersection on a rainy day">
           </div>
           <div class="caption">Crowded rainy intersection with multiple dynamic objects.</div>
         </article>
         <article class="qual-slide">
           <div class="figure-frame">
-            <div class="pdf-embed" style="--ratio: 613 / 308;">
-              <object data="assets/source/qualitative_fig10.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="3D occupancy prediction in a narrow urban street">
-                <img src="assets/qualitative_fig10.png" width="613" height="308" alt="3D occupancy prediction in a narrow urban street">
-              </object>
-            </div>
+            <img src="assets/qualitative_fig10.png?v=1" width="1458" height="710" alt="3D occupancy prediction in a narrow urban street">
           </div>
           <div class="caption">Narrow urban street with parked and moving vehicles, pedestrians, and bicycles.</div>
         </article>
         <article class="qual-slide">
           <div class="figure-frame">
-            <div class="pdf-embed" style="--ratio: 612 / 308;">
-              <object data="assets/source/qualitative_fig11.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="3D occupancy prediction on a bridge with moving vehicles and pedestrians">
-                <img src="assets/qualitative_fig11.png" width="612" height="308" alt="3D occupancy prediction on a bridge with moving vehicles and pedestrians">
-              </object>
-            </div>
+            <img src="assets/qualitative_fig11.png?v=1" width="1458" height="690" alt="3D occupancy prediction on a bridge with moving vehicles and pedestrians">
           </div>
           <div class="caption">Bridge scene with moving vehicles and pedestrians.</div>
         </article>
