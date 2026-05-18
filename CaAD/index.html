@@ -126,7 +126,11 @@
 
     <section class="section teaser">
       <div class="figure-frame">
-        <img src="assets/teaser.png" alt="Overview of CaAD compared with prior marginal end-to-end autonomous driving methods">
+        <div class="pdf-embed" style="--ratio: 2954 / 1452;">
+          <object data="assets/source/teaser.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="Overview of CaAD compared with prior marginal end-to-end autonomous driving methods">
+            <img src="assets/teaser.png" alt="Overview of CaAD compared with prior marginal end-to-end autonomous driving methods">
+          </object>
+        </div>
       </div>
       <div class="contributions">
         <article>
@@ -162,12 +166,20 @@
 
     <section class="section" id="method">
       <h2>Method</h2>
-      <img class="figure" src="assets/main.png" alt="CaAD overall architecture">
+      <div class="figure pdf-embed" style="--ratio: 626 / 375;">
+        <object data="assets/source/main.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="CaAD overall architecture">
+          <img src="assets/main.png" alt="CaAD overall architecture">
+        </object>
+      </div>
       <div class="caption">
         Overall architecture of CaAD. Marginal agent embeddings preserve actor-specific evidence, while
         ego-centric joint-mode embeddings organize interaction hypotheses for coupled ego-agent prediction.
       </div>
-      <img class="figure spaced" src="assets/paper/mode_selection.png" alt="Comparison of all-actor and ego-centric winner-takes-all mode selection">
+      <div class="figure spaced pdf-embed" style="--ratio: 2068 / 735;">
+        <object data="assets/source/mode_selection.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="Comparison of all-actor and ego-centric winner-takes-all mode selection">
+          <img src="assets/paper/mode_selection.png" alt="Comparison of all-actor and ego-centric winner-takes-all mode selection">
+        </object>
+      </div>
       <div class="caption">
         Ego-centric winner-takes-all selects the joint mode using the ego trajectory, then supervises
         relevant agent responses under the selected ego mode.
@@ -233,12 +245,20 @@
         with interaction-critical behavior: joint-causal scene modeling gives the ego policy a more coherent
         future scene, and causality-aware policy alignment further shifts decisions toward safer outcomes.
       </p>
-      <img class="figure" src="assets/visual.png" alt="Qualitative Bench2Drive visualization results from CaAD">
+      <div class="figure pdf-embed" style="--ratio: 912 / 364;">
+        <object data="assets/source/visualization_comp.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="Qualitative Bench2Drive visualization results from CaAD">
+          <img src="assets/visual.png" alt="Qualitative Bench2Drive visualization results from CaAD">
+        </object>
+      </div>
       <div class="caption">
         Bench2Drive qualitative examples show that CaAD can produce more coherent interaction-aware behavior
         in scenes where baseline planners become stuck or collide after failing to reason about nearby agents.
       </div>
-      <img class="figure" src="assets/navsim.png" alt="NAVSIM benchmark result">
+      <div class="figure pdf-embed" style="--ratio: 903 / 701;">
+        <object data="assets/source/navsim.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" type="application/pdf" aria-label="NAVSIM benchmark result">
+          <img src="assets/navsim.png" alt="NAVSIM benchmark result">
+        </object>
+      </div>
       <div class="caption">
         On NAVSIM, CaAD produces trajectories that avoid collision-related objects while staying close to
         the ground-truth driving behavior.
