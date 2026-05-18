@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StreamOcc: Streaming Dense Voxel Representations for 3D Occupancy Prediction">
+  <meta name="keywords" content="StreamOcc, 3D occupancy prediction, dense voxel streaming, autonomous driving">
+  <meta name="author" content="Seokha Moon, Janghyun Baek, Daewon Chae, Yujin Jeong, Giseop Kim, Jungbeom Lee, Jinkyu Kim, Sunwook Choi">
+  <title>StreamOcc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css?v=6">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-owner" href="https://moonseokha.github.io">Seokha Moon</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>
+        <span>StreamOcc</span>
+        <em>Streaming Dense Voxel Representations</em>
+        <em>for 3D Occupancy Prediction</em>
+      </h1>
+      <p class="tagline">
+        Real-time dense voxel streaming for accurate 3D occupancy prediction with distortion-aware temporal aggregation
+        and dynamic-object query injection.
+      </p>
+
+      <div class="authors">
+        <a href="https://moonseokha.github.io">Seokha Moon</a><sup>1,5,†</sup>, <a href="https://scholar.google.com/citations?user=UJR1YYQAAAAJ&amp;hl=en">Janghyun Baek</a><sup>1</sup>,
+        <a href="https://eugene6923.github.io/">Yujin Jeong</a><sup>2</sup>, <a href="https://daewon88.github.io/">Daewon Chae</a><sup>3</sup>,
+        <a href="https://gisbi-kim.github.io/">Giseop Kim</a><sup>4,5,‡</sup>, <a href="https://visionai.korea.ac.kr/">Jungbeom Lee</a><sup>1</sup>,
+        <a href="https://visionai.korea.ac.kr/team/jinkyu_kim">Jinkyu Kim</a><sup>1</sup>,
+        <a href="https://scholar.google.com/citations?user=R3W7dTsAAAAJ&amp;hl=en">Sunwook Choi</a><sup>5</sup>
+      </div>
+
+      <div class="affiliations">
+        <span><sup>1</sup>Korea University</span>
+        <span><sup>2</sup>TU Darmstadt &amp; hessian.AI</span>
+        <span><sup>3</sup>University of Michigan</span>
+        <span><sup>4</sup>DGIST</span>
+        <span><sup>5</sup>NAVER LABS</span>
+      </div>
+      <div class="author-notes">
+        <span><sup>†</sup>Work done during an internship at NAVER LABS</span>
+        <span><sup>‡</sup>Work done while at NAVER LABS</span>
+      </div>
+
+      <p class="author-email">Author's Email: <a href="mailto:shmoon96@korea.ac.kr">shmoon96@korea.ac.kr</a></p>
+
+      <div class="links">
+        <a href="https://arxiv.org/abs/2503.22087"><strong>PDF</strong><small>arXiv</small></a>
+        <a href="https://github.com/moonseokha/StreamOcc"><strong>Code</strong><small>moonseokha/StreamOcc</small></a>
+      </div>
+    </section>
+
+    <section class="section teaser">
+      <div class="figure-frame">
+        <img src="assets/teaser.png?v=2" width="1138" height="456" alt="StreamOcc overview comparing naive dense voxel streaming with StreamAgg and QueryAgg">
+      </div>
+      <div class="caption">
+        StreamOcc addresses two failure modes of naive dense voxel streaming: warping distortion from temporal alignment
+        and degraded dynamic-object representations from image-to-voxel projection.
+      </div>
+    </section>
+
+    <section class="tldr-section" aria-label="TLDR">
+      <p>
+        <strong>TL;DR</strong>
+        StreamOcc keeps dense voxel features in a recurrent streaming buffer, rectifies propagated features with
+        StreamAgg, and injects dynamic-object semantics with QueryAgg to improve accuracy under real-time constraints.
+      </p>
+    </section>
+
+    <section class="section motivation">
+      <h2>Motivation</h2>
+      <p>
+        Dense voxel representations preserve fine-grained 3D spatial structure, but multi-frame dense fusion is expensive.
+        Streaming avoids repeatedly processing all historical frames, yet naive dense voxel streaming creates interpolation
+        artifacts during warping and weakens dynamic-object features when image evidence is projected into voxel space.
+      </p>
+      <div class="problem-grid">
+        <article>
+          <span>01</span>
+          <h3>Warping Distortion</h3>
+          <p>Past voxel features must be aligned to the current ego frame, and interpolation can blur boundaries or introduce artifacts.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Dynamic Object Loss</h3>
+          <p>Distant, occluded, and overlapping agents often lose fine-grained semantics during image-to-voxel projection.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Real-Time Constraint</h3>
+          <p>Practical 3D occupancy needs strong spatial detail without the memory and latency costs of repeated dense history processing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section method">
+      <h2>Method</h2>
+      <img class="figure" src="assets/method.png?v=2" width="1120" height="576" alt="Overall architecture of StreamOcc">
+      <div class="caption">
+        StreamOcc predicts voxel occupancy in a streaming manner through two aggregation stages: StreamAgg for temporal
+        dense voxel accumulation and QueryAgg for targeted dynamic-object refinement.
+      </div>
+
+      <div class="method-grid">
+        <article>
+          <span>StreamAgg</span>
+          <h3>Rectified Voxel Streaming Aggregation</h3>
+          <p>
+            Propagated voxel features are motion-warped into the current ego frame, then corrected with adaptive residual
+            refinement so temporal accumulation stays spatially consistent.
+          </p>
+        </article>
+        <article>
+          <span>QueryAgg</span>
+          <h3>Query-Guided Aggregation</h3>
+          <p>
+            Instance-level queries capture dynamic-object semantics from image space and selectively inject them into
+            occupied voxel regions instead of re-aggregating image features everywhere.
+          </p>
+        </article>
+      </div>
+
+      <img class="figure spaced" src="assets/adaptive_refinement.png?v=2" width="1088" height="324" alt="Adaptive residual refinement module in StreamAgg">
+      <div class="caption">
+        Adaptive residual refinement focuses correction on informative warped voxel features using geometry-aware attention.
+      </div>
+    </section>
+
+    <section class="section results" id="results">
+      <h2>Results</h2>
+      <p class="results-summary">
+        <strong>SOTA Results:</strong> Occ3D-nuScenes / SurroundOcc-benchmark / RayIoU
+      </p>
+      <div class="metrics">
+        <div>
+          <strong>41.9</strong>
+          <span>Occ3D-nuScenes mIoU</span>
+        </div>
+        <div>
+          <strong>23.4</strong>
+          <span>SurroundOcc-benchmark mIoU</span>
+        </div>
+        <div>
+          <strong>41.1</strong>
+          <span>RayIoU</span>
+        </div>
+      </div>
+
+      <div class="table-figures">
+        <figure>
+          <img src="assets/table_occ3d.png?v=2" width="1152" height="686" alt="Quantitative results on Occ3D-nuScenes">
+        </figure>
+        <figure>
+          <img src="assets/table_surround_ray.png?v=2" width="1152" height="444" alt="SurroundOcc and RayIoU quantitative results">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section qualitative" id="qualitative">
+      <h2>Qualitative Results</h2>
+      <div class="qual-carousel" aria-label="StreamOcc qualitative result carousel">
+        <div class="carousel-head">
+          <button class="carousel-btn" type="button" data-qual-prev aria-label="Previous qualitative result">‹</button>
+          <div class="qual-tabs" aria-label="Qualitative result selector">
+            <button class="active" type="button" data-qual-tab="0">SOTA</button>
+            <button type="button" data-qual-tab="1">QueryAgg</button>
+            <button type="button" data-qual-tab="2">Dynamic</button>
+            <button type="button" data-qual-tab="3">Fig. 7</button>
+            <button type="button" data-qual-tab="4">Fig. 8</button>
+            <button type="button" data-qual-tab="5">Fig. 9</button>
+            <button type="button" data-qual-tab="6">Fig. 10</button>
+            <button type="button" data-qual-tab="7">Fig. 11</button>
+          </div>
+          <button class="carousel-btn" type="button" data-qual-next aria-label="Next qualitative result">›</button>
+        </div>
+
+        <article class="qual-slide active">
+          <div class="figure-frame">
+            <img src="assets/qualitative_sota.png?v=2" width="1148" height="602" alt="Qualitative comparison between StreamOcc and ALOcc-mini">
+          </div>
+          <div class="caption">Comparison with the prior real-time method on 3D occupancy reconstruction.</div>
+        </article>
+        <article class="qual-slide">
+          <div class="figure-frame">
+            <img src="assets/queryagg_effect.png?v=2" width="1118" height="574" alt="Effect of QueryAgg on distant, overlapped, and occluded dynamic objects">
+          </div>
+          <div class="caption">QueryAgg improves distant, overlapped, and occluded dynamic-object predictions.</div>
+        </article>
+        <article class="qual-slide">
+          <div class="figure-frame">
+            <img src="assets/visual_dynamic.png?v=3" width="1120" height="570" alt="StreamOcc visualizations in dynamic and crowded urban scenes">
+          </div>
+          <div class="caption">Additional 3D occupancy visualizations across dynamic urban scenes.</div>
+        </article>
+        <article class="qual-slide">
+          <div class="figure-frame">
+            <img src="assets/qualitative_fig7.png?v=1" width="1483" height="700" alt="Visualization results of StreamOcc across three distinct scenarios">
+          </div>
+          <div class="caption">Ablation visualization comparing ground truth, without QueryAgg, with QueryAgg, and image detections.</div>
+        </article>
+        <article class="qual-slide">
+          <div class="figure-frame">
+            <img src="assets/qualitative_fig8.png?v=1" width="1458" height="710" alt="3D occupancy prediction in a dynamic urban scene with construction and pedestrians">
+          </div>
+          <div class="caption">Dynamic urban scene with construction and pedestrians.</div>
+        </article>
+        <article class="qual-slide">
+          <div class="figure-frame">
+            <img src="assets/qualitative_fig9.png?v=1" width="1458" height="710" alt="3D occupancy prediction at a crowded intersection on a rainy day">
+          </div>
+          <div class="caption">Crowded rainy intersection with multiple dynamic objects.</div>
+        </article>
+        <article class="qual-slide">
+          <div class="figure-frame">
+            <img src="assets/qualitative_fig10.png?v=1" width="1458" height="710" alt="3D occupancy prediction in a narrow urban street">
+          </div>
+          <div class="caption">Narrow urban street with parked and moving vehicles, pedestrians, and bicycles.</div>
+        </article>
+        <article class="qual-slide">
+          <div class="figure-frame">
+            <img src="assets/qualitative_fig11.png?v=1" width="1458" height="690" alt="3D occupancy prediction on a bridge with moving vehicles and pedestrians">
+          </div>
+          <div class="caption">Bridge scene with moving vehicles and pedestrians.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section bibtex" id="citation">
+      <h2>Citation</h2>
+      <pre><code>@misc{moon2025streamocc,
+  title={Streaming Dense Voxel Representations for 3D Occupancy Prediction},
+  author={Moon, Seokha and Baek, Janghyun and Jeong, Yujin and Chae, Daewon and Kim, Giseop and Lee, Jungbeom and Kim, Jinkyu and Choi, Sunwook},
+  year={2025},
+  eprint={2503.22087},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2503.22087}
+}</code></pre>
+    </section>
+
+  </main>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".qual-slide"));
+    const tabs = Array.from(document.querySelectorAll("[data-qual-tab]"));
+    const prev = document.querySelector("[data-qual-prev]");
+    const next = document.querySelector("[data-qual-next]");
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle("active", slideIndex === currentSlide);
+      });
+      tabs.forEach((tab, tabIndex) => {
+        tab.classList.toggle("active", tabIndex === currentSlide);
+      });
+    }
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => showSlide(index));
+    });
+    prev.addEventListener("click", () => showSlide(currentSlide - 1));
+    next.addEventListener("click", () => showSlide(currentSlide + 1));
+  </script>
+</body>
+</html>

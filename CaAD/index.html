@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CaAD: Causality-Aware End-to-End Autonomous Driving via Ego-Centric Joint Scene Modeling">
+  <meta name="keywords" content="CaAD, autonomous driving, end-to-end planning, causal modeling, joint prediction">
+  <meta name="author" content="Seokha Moon">
+  <title>CaAD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-owner" href="https://moonseokha.github.io">Seokha Moon</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="venue">CaAD · arXiv 2026</p>
+      <h1>Causality-Aware End-to-End Autonomous Driving<br class="desktop-break"> via Ego-Centric Joint Scene Modeling</h1>
+      <p class="tagline">
+        Modeling interaction-critical futures with ego-centric joint scene hypotheses for safer closed-loop planning.
+      </p>
+
+      <div class="authors">
+        <a href="https://moonseokha.github.io">Seokha Moon</a><sup>1</sup>,
+        <a href="https://scholar.google.com/citations?user=59Elq7sAAAAJ&amp;hl=en">Minseung Lee</a><sup>1</sup>,
+        <a href="https://visionai.korea.ac.kr/_pages/team/intern/2026/03/07/researcher-joon-seo-7165.html">Joon Seo</a><sup>1</sup>,
+        <a href="https://scholar.google.com/citations?user=-x3wvW8AAAAJ">Jinkyu Kim</a><sup>1,2</sup>,
+        <a href="https://visionai.korea.ac.kr/">Jungbeom Lee</a><sup>1</sup>
+      </div>
+
+      <div class="affiliations">
+        <span><sup>1</sup>Korea University</span>
+        <span><sup>2</sup>Kakao Mobility</span>
+      </div>
+      <p class="author-email">Author's Email: <a href="mailto:shmoon96@korea.ac.kr">shmoon96@korea.ac.kr</a></p>
+
+      <div class="links">
+        <a href="https://arxiv.org/abs/2605.13646"><strong>Paper</strong><small>arXiv</small></a>
+        <span><strong>Code</strong><small>Coming soon</small></span>
+      </div>
+    </section>
+
+    <section class="section video-comparison">
+      <h2>Bench2Drive Visualization Comparison</h2>
+      <p>
+        Closed-loop Bench2Drive videos compare HiP-AD and CaAD under the same interaction-critical scenes.
+      </p>
+      <div class="comparison-carousel" aria-label="HiP-AD and CaAD qualitative comparison carousel">
+        <div class="carousel-head">
+          <button class="carousel-btn" type="button" data-carousel-prev aria-label="Previous scene">‹</button>
+          <div class="scene-tabs" aria-label="Scene selector">
+            <button class="active" type="button" data-scene-tab="0">Scene 1</button>
+            <button type="button" data-scene-tab="1">Scene 2</button>
+            <button type="button" data-scene-tab="2">Scene 3</button>
+          </div>
+          <button class="carousel-btn" type="button" data-carousel-next aria-label="Next scene">›</button>
+        </div>
+        <div class="scene-track">
+          <article class="scene-card active" data-duration="15000">
+            <h3>Scene 1</h3>
+            <div class="video-pair">
+              <figure class="clip fail">
+                <span>HiP-AD</span>
+                <video width="990" height="270" muted playsinline preload="auto" aria-label="HiP-AD failure case in Bench2Drive scene 1">
+                  <source src="assets/videos/hipad-scene1.mp4?v=7" data-src="assets/videos/hipad-scene1.mp4?v=7" type="video/mp4">
+                </video>
+              </figure>
+              <figure class="clip success">
+                <span>CaAD</span>
+                <video width="990" height="270" muted playsinline preload="auto" aria-label="CaAD successful behavior in Bench2Drive scene 1">
+                  <source src="assets/videos/caad-scene1.mp4?v=7" data-src="assets/videos/caad-scene1.mp4?v=7" type="video/mp4">
+                </video>
+              </figure>
+            </div>
+          </article>
+          <article class="scene-card" data-duration="16000">
+            <h3>Scene 2</h3>
+            <div class="video-pair">
+              <figure class="clip fail">
+                <span>HiP-AD</span>
+                <video width="990" height="270" muted playsinline preload="auto" aria-label="HiP-AD failure case in Bench2Drive scene 2">
+                  <source src="assets/videos/hipad-scene2.mp4?v=9" data-src="assets/videos/hipad-scene2.mp4?v=9" type="video/mp4">
+                </video>
+              </figure>
+              <figure class="clip success">
+                <span>CaAD</span>
+                <video width="990" height="270" muted playsinline preload="auto" aria-label="CaAD successful behavior in Bench2Drive scene 2">
+                  <source src="assets/videos/caad-scene2.mp4?v=9" data-src="assets/videos/caad-scene2.mp4?v=9" type="video/mp4">
+                </video>
+              </figure>
+            </div>
+          </article>
+          <article class="scene-card" data-duration="30000">
+            <h3>Scene 3</h3>
+            <div class="video-pair">
+              <figure class="clip fail">
+                <span>HiP-AD</span>
+                <video width="990" height="270" muted playsinline preload="auto" aria-label="HiP-AD failure case in Bench2Drive scene 3">
+                  <source src="assets/videos/hipad-scene3.mp4?v=10" data-src="assets/videos/hipad-scene3.mp4?v=10" type="video/mp4">
+                </video>
+              </figure>
+              <figure class="clip success">
+                <span>CaAD</span>
+                <video width="990" height="270" muted playsinline preload="auto" aria-label="CaAD successful behavior in Bench2Drive scene 3">
+                  <source src="assets/videos/caad-scene3.mp4?v=9" data-src="assets/videos/caad-scene3.mp4?v=9" type="video/mp4">
+                </video>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tldr-section" aria-label="TLDR">
+      <p>
+        <strong>TL;DR</strong>
+        CaAD models ego-agent causal dependencies through ego-centric joint scene representations, then aligns
+        the ego policy with planning-oriented closed-loop feedback.
+      </p>
+    </section>
+
+    <section class="section teaser">
+      <div class="figure-frame">
+        <img src="assets/teaser.png" alt="Overview of CaAD compared with prior marginal end-to-end autonomous driving methods">
+      </div>
+      <div class="contributions">
+        <article>
+          <h3>Joint Scene Modes</h3>
+          <p>Builds ego-conditioned scene hypotheses instead of relying only on loosely coupled marginal futures.</p>
+        </article>
+        <article>
+          <h3>Causal Policy Alignment</h3>
+          <p>Refines the stochastic ego policy using feedback computed against traffic and map context.</p>
+        </article>
+        <article>
+          <h3>Closed-Loop Gains</h3>
+          <p>Achieves strong performance on Bench2Drive and NAVSIM with coherent interaction reasoning.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section problem">
+      <h2>Motivation</h2>
+      <p>
+        In interactive driving, an ego trajectory is only meaningful together with the surrounding agents
+        that respond to it. A merge may be feasible only when a nearby vehicle yields, and an overtake may
+        be safe only when other agents maintain compatible motions. Existing end-to-end planners often
+        predict ego and agent futures as marginal outputs, so their trajectories can be individually
+        plausible but scene-inconsistent when evaluated together.
+      </p>
+      <div class="callout">
+        <strong>Key idea.</strong>
+        CaAD represents each future as an ego-centric joint scene mode: the ego plan and the futures of
+        interaction-relevant agents are decoded under the same hypothesis.
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <h2>Method</h2>
+      <img class="figure" src="assets/main.png" alt="CaAD overall architecture">
+      <div class="caption">
+        Overall architecture of CaAD. Marginal agent embeddings preserve actor-specific evidence, while
+        ego-centric joint-mode embeddings organize interaction hypotheses for coupled ego-agent prediction.
+      </div>
+      <img class="figure spaced" src="assets/paper/mode_selection.png" alt="Comparison of all-actor and ego-centric winner-takes-all mode selection">
+      <div class="caption">
+        Ego-centric winner-takes-all selects the joint mode using the ego trajectory, then supervises
+        relevant agent responses under the selected ego mode.
+      </div>
+      <div class="method-grid">
+        <article>
+          <span>01</span>
+          <h3>Marginal-Joint Interaction</h3>
+          <p>
+            CaAD starts from decoded ego and agent embeddings, then introduces joint-mode embeddings that
+            form compact mode-wise token sequences. Agent-Mode Attention refines these embeddings so each
+            joint mode can carry scene information specific to the ego or agent entity.
+          </p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Interaction-Relevant Agents</h3>
+          <p>
+            Instead of coupling every actor, CaAD selects agents whose marginal futures may collide with
+            the ego spatial path. This focuses joint supervision on agents that matter for the ego maneuver
+            and leaves distant actors to standard marginal forecasting.
+          </p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Ego-Centric Mode Assignment</h3>
+          <p>
+            The selected joint mode is chosen by ego trajectory error, then the same ego-selected mode
+            supervises relevant agent responses. This avoids all-actor winner-takes-all assignments that
+            can let irrelevant agents dominate the scene mode.
+          </p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Causality-Aware Policy Alignment</h3>
+          <p>
+            A GRPO-style post-training stage samples ego trajectories under the learned joint scene modes and
+            scores them with planning-oriented feedback. RL updates only the ego policy, while surrounding
+            agent forecasting remains supervised for stability.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <h2>Results</h2>
+      <div class="metrics">
+        <div>
+          <strong>87.53</strong>
+          <span>Bench2Drive Driving Score</span>
+        </div>
+        <div>
+          <strong>71.81</strong>
+          <span>Bench2Drive Success Rate</span>
+        </div>
+        <div>
+          <strong>91.1</strong>
+          <span>NAVSIM PDMS</span>
+        </div>
+      </div>
+      <p>
+        CaAD improves closed-loop planning on both Bench2Drive and NAVSIM. The gains are especially aligned
+        with interaction-critical behavior: joint-causal scene modeling gives the ego policy a more coherent
+        future scene, and causality-aware policy alignment further shifts decisions toward safer outcomes.
+      </p>
+      <img class="figure" src="assets/visual.png" alt="Qualitative Bench2Drive visualization results from CaAD">
+      <div class="caption">
+        Bench2Drive qualitative examples show that CaAD can produce more coherent interaction-aware behavior
+        in scenes where baseline planners become stuck or collide after failing to reason about nearby agents.
+      </div>
+      <img class="figure" src="assets/navsim.png" alt="NAVSIM benchmark result">
+      <div class="caption">
+        On NAVSIM, CaAD produces trajectories that avoid collision-related objects while staying close to
+        the ground-truth driving behavior.
+      </div>
+      <div class="paper-tables">
+        <figure>
+          <img src="assets/tables/bench2drive.png" alt="PDF capture of Bench2Drive closed-loop and ability metric tables">
+          <figcaption>Bench2Drive closed-loop and interaction-critical ability comparisons.</figcaption>
+        </figure>
+        <div class="table-pair">
+          <figure>
+            <img src="assets/tables/ablation.png" alt="PDF capture of Bench2Drive-mini ablation table">
+            <figcaption>Bench2Drive-mini ablation study.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/tables/navsim.png" alt="PDF capture of NAVSIM closed-loop planning table">
+            <figcaption>NAVSIM closed-loop planning comparison.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>BibTeX</h2>
+      <pre><code>@article{moon2026caad,
+  title={Causality-Aware End-to-End Autonomous Driving via Ego-Centric Joint Scene Modeling},
+  author={Moon, Seokha and Lee, Minseung and Seo, Joon and Kim, Jinkyu and Lee, Jungbeom},
+  journal={arXiv preprint arXiv:2605.13646},
+  year={2026}
+}</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://moonseokha.github.io">Seokha Moon</a>
+  </footer>
+
+  <script>
+    (() => {
+      const carousel = document.querySelector('.comparison-carousel');
+      if (!carousel) return;
+      const scenes = [...carousel.querySelectorAll('.scene-card')];
+      const tabs = [...carousel.querySelectorAll('[data-scene-tab]')];
+      const prev = carousel.querySelector('[data-carousel-prev]');
+      const next = carousel.querySelector('[data-carousel-next]');
+      let index = 0;
+      let timer;
+
+      function loadScene(scene) {
+        scene.querySelectorAll('img[data-src]').forEach((img) => {
+          if (!img.getAttribute('src')) img.setAttribute('src', img.dataset.src);
+        });
+        scene.querySelectorAll('source[data-src]').forEach((source) => {
+          if (!source.getAttribute('src')) {
+            source.setAttribute('src', source.dataset.src);
+            source.parentElement.load();
+          }
+        });
+      }
+
+      function playScene(scene) {
+        scenes.forEach((item) => {
+          item.querySelectorAll('video').forEach((video) => {
+            if (item !== scene) {
+              video.pause();
+              try { video.currentTime = 0; } catch (error) {}
+              return;
+            }
+            const restart = () => {
+              try { video.currentTime = 0; } catch (error) {}
+              const playback = video.play();
+              if (playback) playback.catch(() => {});
+            };
+            const playWhenReady = () => {
+              if (video.readyState >= 2) restart();
+              else {
+                video.load();
+                video.addEventListener('loadeddata', restart, { once: true });
+                video.addEventListener('canplay', restart, { once: true });
+              }
+            };
+            playWhenReady();
+            window.setTimeout(playWhenReady, 120);
+          });
+        });
+      }
+
+      function showScene(nextIndex, userInitiated = false) {
+        index = (nextIndex + scenes.length) % scenes.length;
+        scenes.forEach((scene, i) => scene.classList.toggle('active', i === index));
+        tabs.forEach((tab, i) => tab.classList.toggle('active', i === index));
+        loadScene(scenes[index]);
+        playScene(scenes[index]);
+        window.clearTimeout(timer);
+        const duration = Number(scenes[index].dataset.duration || 26000);
+        timer = window.setTimeout(() => showScene(index + 1), duration);
+        if (userInitiated) scenes[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      tabs.forEach((tab, i) => tab.addEventListener('click', () => showScene(i, true)));
+      prev.addEventListener('click', () => showScene(index - 1, true));
+      next.addEventListener('click', () => showScene(index + 1, true));
+      showScene(0);
+    })();
+  </script>
+</body>
+</html>
