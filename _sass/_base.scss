@@ -991,6 +991,21 @@ footer.sticky-bottom {
     object-fit: cover;
   }
 
+  ol.bibliography li .publication-preview-pdf {
+    display: block;
+    width: 100%;
+    min-height: 126px;
+    aspect-ratio: 1.45;
+    border: 1px solid var(--global-divider-color);
+    background: var(--global-card-bg-color);
+    pointer-events: none;
+  }
+
+  ol.bibliography li .publication-preview-pdf-link {
+    display: block;
+    text-decoration: none;
+  }
+
   ol.bibliography li .title {
     font-size: 1.03rem;
     line-height: 1.35;
