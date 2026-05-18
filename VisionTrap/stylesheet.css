@@ -133,6 +133,15 @@ body {
     flex-wrap: wrap;
 }
 
+.authors a {
+    color: #1b6fd8;
+    text-decoration: none;
+}
+
+.authors a:hover {
+    text-decoration: underline;
+}
+
 .affiliations {
     margin-bottom: 5px;
     text-align: center;

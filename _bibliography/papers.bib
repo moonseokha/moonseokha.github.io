@@ -1,5 +1,32 @@
 ---
 ---
+@article{caad,
+    abbr = "Preprint",
+    title = {Causality-Aware End-to-End Autonomous Driving via Ego-Centric Joint Scene Modeling},
+    author = {Moon, Seokha and Lee, Minseung and Seo, Joon and Kim, Jinkyu and Lee, Jungbeom},
+    year = {2026},
+    journal={arXiv Preprint},
+    paper={https://arxiv.org/abs/2605.13646},
+    website={https://moonseokha.github.io/CaAD/},
+    preview={CAAD.png},
+    selected = {true},
+    abstract = {End-to-end autonomous driving directly predicts future trajectories from sensor inputs, but existing methods often overlook causal interdependencies in ego-vehicle planning. We propose CaAD, a causality-aware end-to-end autonomous driving framework that learns ego-centric joint-causal dependencies between the ego vehicle and interaction-relevant agents, then aligns the stochastic ego policy using planning-oriented closed-loop feedback.}
+}
+
+@article{streamocc,
+    abbr = "Preprint",
+    title = {Streaming Dense Voxel Representations for 3D Occupancy Prediction},
+    author = {Moon, Seokha and Baek, Janghyun and Jeong, Yujin and Chae, Daewon and Kim, Giseop and Lee, Jungbeom and Kim, Jinkyu and Choi, Sunwook},
+    year = {2026},
+    journal={Preprint},
+    paper={https://arxiv.org/abs/2503.22087},
+    code={https://github.com/moonseokha/StreamOcc},
+    website={https://moonseokha.github.io/StreamOcc/},
+    preview={STREAMOCC.png},
+    selected = {true},
+    abstract = {StreamOcc explores dense voxel streaming for accurate and efficient 3D occupancy prediction. It refines propagated voxel features to reduce warping artifacts before temporal accumulation and selectively injects instance-level query features into corresponding occupied voxel regions, preserving temporal consistency while strengthening dynamic-object representations.}
+}
+
 @article{imagepg,
     abbr = "WACV",
     title = {Image-Guided Semantic Pseudo-LiDAR Point Generation for 3D Object Detection},
@@ -38,24 +65,6 @@
    Together, these components enable robust and interpretable trajectory planning, even under challenging uncertainty conditions. 
    Evaluated on the NAVSIM benchmark, our method achieves state-of-the-art performance, delivering substantial gains on both the challenging NAVHARD and NAVSAFE subsets. 
    These results demonstrate that our principled aleatoric uncertainty modeling combined with driving priors significantly advances the safety and reliability of camera-only E2E autonomous driving.}
-}
-
-@article{duocc,
-    abbr = "Preprint",
-    title = {Stream and Query-guided Feature Aggregation for Efficient and Effective 3D Occupancy Prediction},
-    author = {Moon, Seokha and Baek, Janghyun and Kim, Giseop and Kim, Jinkyu and Choi, Sunwook},
-    year = {2025},
-    journal={Arxiv Preprint},
-    paper={https://arxiv.org/abs/2503.22087},
-    preview={DUOCC.png},
-    selected = {true},
-    code={https://github.com/moonseokha/duocc},
-    abstract = {3D occupancy prediction has become a key perception task in autonomous driving, as it enables comprehensive scene understanding. 
-    Recent methods enhance this understanding by incorporating spatiotemporal information through multi-frame fusion, but they suffer from a trade-off: dense voxel-based representations provide high accuracy at significant computational cost, whereas sparse representations improve efficiency but lose spatial detail. 
-    To mitigate this trade-off, we introduce DuOcc, which employs a dual aggregation strategy that retains dense voxel representations to preserve spatial fidelity while maintaining high efficiency. 
-    DuOcc consists of two key components: (i) Stream-based Voxel Aggregation, which recurrently accumulates voxel features over time and refines them to suppress warping-induced distortions, preserving a clear separation between occupied and free space. 
-    (ii) Query-guided Aggregation, which complements the limitations of voxel accumulation by selectively injecting instance-level query features into the voxel regions occupied by dynamic objects. 
-Experiments on the widely used Occ3D-nuScenes and SurroundOcc datasets demonstrate that DuOcc achieves state-of-the-art performance in real-time settings, while reducing memory usage by over 40% compared to prior methods.}
 }
 
 @article{visiontrap,
