@@ -988,7 +988,24 @@ footer.sticky-bottom {
 
   ol.bibliography li .preview {
     border-radius: 8px !important;
-    object-fit: cover;
+    object-fit: contain;
+    background: #fff;
+  }
+
+  ol.bibliography li .preview-pdf {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 1.45;
+  }
+
+  ol.bibliography li .preview-pdf object,
+  ol.bibliography li .preview-pdf img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    pointer-events: none;
   }
 
   ol.bibliography li .title {
