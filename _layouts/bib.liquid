@@ -34,7 +34,13 @@
           {% if preview_ext == 'pdf' %}
             {% assign pdf_preview_src = entry_path | relative_url | bust_file_cache %}
             {% assign fallback_preview_path = entry_path | replace: '.pdf', '.png' %}
-            <a class="preview preview-pdf z-depth-1 rounded" href="{{ entry_path | relative_url }}" aria-label="{{ entry.preview }}">
+            <button
+              class="preview preview-pdf z-depth-1 rounded"
+              type="button"
+              data-pdf-zoom="{{ pdf_preview_src }}"
+              data-pdf-fallback="{{ fallback_preview_path | relative_url | bust_file_cache }}"
+              aria-label="Expand {{ entry.preview }}"
+            >
               <object
                 data="{{ pdf_preview_src }}#page=1&toolbar=0&navpanes=0&scrollbar=0&view=Fit"
                 type="application/pdf"
@@ -42,7 +48,7 @@
               >
                 <img src="{{ fallback_preview_path | relative_url | bust_file_cache }}" alt="{{ entry.preview }}">
               </object>
-            </a>
+            </button>
           {% else %}
             {%
               include figure.liquid
