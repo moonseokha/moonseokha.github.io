@@ -994,12 +994,21 @@ footer.sticky-bottom {
 
   ol.bibliography li .preview-pdf {
     appearance: none;
+    position: relative;
     display: block;
     width: 100%;
     overflow: hidden;
     padding: 0;
     border: 0;
     aspect-ratio: 1.45;
+    cursor: zoom-in;
+  }
+
+  ol.bibliography li .preview-pdf .preview-click-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: block;
     cursor: zoom-in;
   }
 

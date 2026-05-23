@@ -36,6 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   triggers.forEach((trigger) => {
     trigger.addEventListener("click", () => openPreview(trigger));
+    trigger.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      openPreview(trigger);
+    });
   });
 
   closeButton.addEventListener("click", closePreview);
