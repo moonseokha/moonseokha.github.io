@@ -32,38 +32,19 @@
           {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
           {% assign preview_ext = entry.preview | split: '.' | last | downcase %}
           {% if preview_ext == 'pdf' %}
-            {% assign pdf_preview_src = entry_path | relative_url | bust_file_cache %}
-            {% assign fallback_preview_path = entry_path | replace: '.pdf', '.png' %}
-            <div
-              class="preview preview-pdf z-depth-1 rounded"
-              role="button"
-              tabindex="0"
-              data-pdf-zoom="{{ pdf_preview_src }}"
-              data-pdf-fallback="{{ fallback_preview_path | relative_url | bust_file_cache }}"
-              aria-label="Expand {{ entry.preview }}"
-            >
-              <object
-                data="{{ pdf_preview_src }}#page=1&toolbar=0&navpanes=0&scrollbar=0&view=Fit"
-                type="application/pdf"
-                aria-label="{{ entry.preview }}"
-              >
-                <img src="{{ fallback_preview_path | relative_url | bust_file_cache }}" alt="{{ entry.preview }}">
-              </object>
-              <span class="preview-click-layer" aria-hidden="true"></span>
-            </div>
-          {% else %}
-            {%
-              include figure.liquid
-              loading="eager"
-              path=entry_path
-              sizes = "200px"
-              class="preview z-depth-1 rounded"
-              zoomable=true
-              avoid_scaling=true
-              cache_bust=true
-              alt=entry.preview
-            %}
+            {% assign entry_path = entry_path | replace: '.pdf', '.png' %}
           {% endif %}
+          {%
+            include figure.liquid
+            loading="eager"
+            path=entry_path
+            sizes = "200px"
+            class="preview z-depth-1 rounded"
+            zoomable=true
+            avoid_scaling=true
+            cache_bust=true
+            alt=entry.preview
+          %}
         {% endif %}
       {% endif %}
     </div>
