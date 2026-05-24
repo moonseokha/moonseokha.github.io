@@ -5,16 +5,17 @@ import fitz
 
 PREVIEW_DIR = Path("assets/img/publication_preview")
 TARGET_WIDTH = 4200
+ZOOM_TARGET_WIDTH = 8400
 
 
-def render_preview(pdf_path: Path) -> bool:
-    png_path = pdf_path.with_suffix(".png")
+def render_preview(pdf_path: Path, output_path: Path, target_width: int) -> bool:
+    png_path = output_path
     if png_path.exists() and png_path.stat().st_mtime >= pdf_path.stat().st_mtime:
         return False
 
     with fitz.open(pdf_path) as doc:
         page = doc[0]
-        zoom = TARGET_WIDTH / page.rect.width
+        zoom = target_width / page.rect.width
         pix = page.get_pixmap(matrix=fitz.Matrix(zoom, zoom), alpha=False)
         pix.save(png_path)
 
@@ -24,7 +25,11 @@ def render_preview(pdf_path: Path) -> bool:
 def main() -> None:
     rendered = []
     for pdf_path in sorted(PREVIEW_DIR.glob("*.pdf")):
-        if render_preview(pdf_path):
+        thumbnail_path = pdf_path.with_suffix(".png")
+        zoom_path = pdf_path.with_name(f"{pdf_path.stem}-zoom.png")
+        changed = render_preview(pdf_path, thumbnail_path, TARGET_WIDTH)
+        changed = render_preview(pdf_path, zoom_path, ZOOM_TARGET_WIDTH) or changed
+        if changed:
             rendered.append(pdf_path.name)
 
     if rendered:
