@@ -992,6 +992,74 @@ footer.sticky-bottom {
     background: #fff;
   }
 
+  ol.bibliography li .publication-preview-button {
+    display: block;
+    padding: 0;
+    border: 0;
+    color: inherit;
+    background: transparent;
+    cursor: zoom-in;
+  }
+
+  ol.bibliography li .publication-preview-button:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+
+  ol.bibliography li .publication-preview-button .preview {
+    display: block;
+  }
+
+  .publication-pdf-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.74);
+  }
+
+  .publication-pdf-modal.open {
+    display: flex;
+  }
+
+  .publication-pdf-dialog {
+    position: relative;
+    width: min(1280px, calc(100vw - 48px));
+    max-height: calc(100vh - 56px);
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+  }
+
+  .publication-pdf-dialog object {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #fff;
+  }
+
+  .publication-pdf-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.66);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
   ol.bibliography li .title {
     font-size: 1.03rem;
     line-height: 1.35;
