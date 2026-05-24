@@ -34,7 +34,7 @@
           {% assign preview_ext = entry.preview | split: '.' | last | downcase %}
           {% if preview_ext == 'pdf' %}
             {% assign entry_path = entry_path | replace: '.pdf', '.png' %}
-            {% assign zoom_path = entry_path | replace: '.png', '-zoom.png' %}
+            {% assign zoom_path = entry.preview | replace: '.pdf', '-zoom.png' | prepend: '/assets/publication_preview_zoom/' %}
           {% endif %}
           {%
             include figure.liquid
