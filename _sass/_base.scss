@@ -1028,7 +1028,8 @@ footer.sticky-bottom {
 
   .publication-pdf-dialog {
     position: relative;
-    width: min(1280px, calc(100vw - 48px));
+    width: calc(100vw - 48px);
+    max-width: 1280px;
     max-height: calc(100vh - 56px);
     overflow: hidden;
     border-radius: 8px;

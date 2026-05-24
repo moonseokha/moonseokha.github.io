@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <object type="application/pdf"></object>
     </div>
   `;
-  document.body.appendChild(modal);
+  const modalHost = document.querySelector(".publications") || document.body;
+  modalHost.appendChild(modal);
 
   const dialog = modal.querySelector(".publication-pdf-dialog");
   const closeButton = modal.querySelector(".publication-pdf-close");
