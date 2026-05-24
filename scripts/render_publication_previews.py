@@ -4,6 +4,7 @@ import fitz
 
 
 PREVIEW_DIR = Path("assets/img/publication_preview")
+ZOOM_DIR = Path("assets/publication_preview_zoom")
 TARGET_WIDTH = 4200
 ZOOM_TARGET_WIDTH = 8400
 
@@ -23,10 +24,11 @@ def render_preview(pdf_path: Path, output_path: Path, target_width: int) -> bool
 
 
 def main() -> None:
+    ZOOM_DIR.mkdir(parents=True, exist_ok=True)
     rendered = []
     for pdf_path in sorted(PREVIEW_DIR.glob("*.pdf")):
         thumbnail_path = pdf_path.with_suffix(".png")
-        zoom_path = pdf_path.with_name(f"{pdf_path.stem}-zoom.png")
+        zoom_path = ZOOM_DIR / f"{pdf_path.stem}-zoom.png"
         changed = render_preview(pdf_path, thumbnail_path, TARGET_WIDTH)
         changed = render_preview(pdf_path, zoom_path, ZOOM_TARGET_WIDTH) or changed
         if changed:
