@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-💼📄 Our paper **“Mitigating Trade-off: Stream and Query-guided Aggregation for Efficient and Effective 3D Occupancy Prediction”** has been released on arXiv! The work was done during my internship at NAVER LABS.
+💼📄 Our paper **“Streaming Dense Voxel Representations for 3D Occupancy Prediction” (StreamOcc)** has been released on arXiv! The work was done during my internship at NAVER LABS.

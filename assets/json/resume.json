@@ -58,10 +58,11 @@
       "url": "https://www.naverlabs.com/",
       "startDate": "2024-09-01",
       "endDate": "2025-03-01",
-      "summary": "Worked on real-time 3D occupancy prediction for autonomous driving. Developed StreamOcc, an efficient voxel-based method achieving state-of-the-art performance with reduced latency and memory usage.",
+      "summary": "Worked on real-time 3D occupancy prediction for autonomous driving. Developed StreamOcc, an ECCV 2026 accepted efficient voxel-based method achieving state-of-the-art performance with reduced latency and memory usage.",
       "highlights": [
         "Designed StreamOcc, an efficient yet effective 3D occupancy prediction model.",
-        "Achieved real-time performance while reducing memory usage."
+        "Achieved real-time performance while reducing memory usage.",
+        "Resulting work accepted to ECCV 2026."
       ]
     },
     {
@@ -118,11 +119,11 @@
       "summary": "SUPER-AD introduces uncertainty-aware BEV planning with lane-following priors for safer and more robust camera-only end-to-end autonomous driving."
     },
     {
-      "name": "Stream and Query-guided Feature Aggregation for Efficient and Effective 3D Occupancy Prediction",
-      "publisher": "Seokha Moon, Janghyun Baek, Giseop Kim, Jinkyu Kim, Sunwook Choi <br><br>arXiv Preprint",
-      "releaseDate": "2025",
+      "name": "Streaming Dense Voxel Representations for 3D Occupancy Prediction",
+      "publisher": "Seokha Moon, Janghyun Baek, Yujin Jeong, Daewon Chae, Giseop Kim, Jungbeom Lee, Jinkyu Kim, Sunwook Choi <br><br>European Conference on Computer Vision (ECCV)",
+      "releaseDate": "2026",
       "url": "https://arxiv.org/abs/2503.22087",
-      "summary": "DuOcc introduces an efficient 3D occupancy prediction model that maintains dense voxel representations via dual aggregation with stream-based accumulation and query-guided refinement."
+      "summary": "StreamOcc introduces an efficient 3D occupancy prediction model that maintains dense voxel representations via streaming accumulation and query-guided dynamic-object refinement."
     },
     {
       "name": "VisionTrap: Vision-Augmented Trajectory Prediction Guided by Textual Descriptions",
