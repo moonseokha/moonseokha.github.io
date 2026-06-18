@@ -447,7 +447,7 @@ th {
 }
 
 .table-figures img {
-  border-bottom: 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .figure-grid figcaption,
@@ -461,7 +461,13 @@ th {
 }
 
 .table-figures figcaption {
-  display: none;
+  min-height: 0;
+  color: #34404a;
+}
+
+.qual-slide .caption {
+  width: calc(100% - 38px);
+  max-width: none;
 }
 
 .qual-carousel {
