@@ -149,7 +149,7 @@ ninja.data = [{
           section: "News",},{id: "news-i-received-my-ph-d-from-korea-university-vision-amp-amp-ai-lab",
           title: '🎓 I received my Ph.D. from Korea University, Vision &amp;amp;amp; AI Lab!',
           description: "",
-          section: "News",},{id: "news-recast-recasting-vision-language-semantics-into-an-actionable-cost-map-for-robot-navigation-is-now-available-with-a-new-project-page",
+          section: "News",},{id: "news-recast-recasting-vision-language-semantics-into-an-actionable-cost-map-for-robot-navigation-is-now-available-with-a-new-project-page-and-arxiv-preprint",
           title: '🤖 RECAST: Recasting Vision-Language Semantics into an Actionable Cost Map for Robot Navigation...',
           description: "",
           section: "News",},{id: "projects-project-1",
