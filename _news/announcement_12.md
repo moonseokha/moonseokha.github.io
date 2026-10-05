@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🤖 **RECAST: Recasting Vision-Language Semantics into an Actionable Cost Map for Robot Navigation** is now available with a new [project page](https://recast-nav.github.io/).
+🤖 **RECAST: Recasting Vision-Language Semantics into an Actionable Cost Map for Robot Navigation** is now available with a new [project page](https://recast-nav.github.io/) and [arXiv preprint](https://arxiv.org/abs/2609.32595).
