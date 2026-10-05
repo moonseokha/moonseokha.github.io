@@ -1,12 +1,11 @@
 {
-
   "basics": {
     "name": "Seokha Moon",
-    "label": "Ph.D. student | Autonomous Driving 🚗 & Robotics 🤖",
+    "label": "AI Planning Researcher @ KakaoMobility | Ph.D. | Autonomous Driving 🚗 & Robotics 🤖",
     "email": "shmoon96@korea.ac.kr",
     "phone": "+82 10-2216-0173",
     "url": "https://moonseokha.github.io",
-    "summary": "Ph.D. Student at Korea University advised by Prof. Jinkyu Kim. My research focuses on camera-based perception for autonomous driving, including 3D detection, occupancy prediction, and trajectory forecasting with language guidance. Currently interested in Vision-Language Navigation for autonomous robots and end-to-end frameworks for autonomous driving.",
+    "summary": "I completed my Ph.D. at Korea University's Vision & AI Lab, advised by Prof. Jungbeom Lee and Prof. Jinkyu Kim, and currently work as an AI planning researcher in KakaoMobility's Autonomous Driving Development Team. My research focuses on autonomous driving and robotics across perception, prediction, and planning. I have led first-author projects on multi-camera 3D object detection, streaming 3D occupancy prediction, VLM-guided trajectory prediction, and end-to-end planning. My current interests include reliable closed-loop planning and Vision-Language-Action (VLA) models that connect perception, reasoning, and decision-making.",
     "location": {
       "city": "Seoul",
       "countryCode": "KR"
@@ -17,155 +16,202 @@
       "institution": "Korea University",
       "location": "Seoul, South Korea",
       "url": "https://www.korea.ac.kr",
-      "area": "Major: AI Applications",
-      "studyType": "Ph.D. (Advisor: Prof. Jinkyu Kim)",
+      "area": "Major: Artificial Intelligence Applications",
+      "studyType": "Ph.D. (Advisors: Prof. Jungbeom Lee and Prof. Jinkyu Kim)",
       "startDate": "2022-09-01",
-      "score": "GPA: 4.37/4.5"
+      "endDate": "2026-08-31",
+      "score": "GPA: 4.36/4.5"
     },
     {
       "institution": "Yonsei University",
       "location": "Seoul, South Korea",
       "url": "https://www.yonsei.ac.kr",
       "area": "Major: Computer Science",
-      "studyType": "Bachelor",
+      "studyType": "B.S.",
       "startDate": "2016-03-01",
       "endDate": "2022-08-31",
-      "score": "Overall GPA: 3.67/4.3, Major GPA: 3.97/4.5",
+      "score": "Overall GPA: 3.45/4.3, Major GPA: 3.97/4.5",
       "courses": [
-        "Operating Systems", "Computer Architecture", "Algorithms", "Data Structures",
-        "Artificial Intelligence", "Computer Graphics", "Object-Oriented Programming", "Theory of Computation"
-      ]
-    }
-  ],
-  "interests": [
-    {
-      "name": "Autonomous Driving and Robot",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Camera-based 3D Object Detection",
-        "Camera-based 3D Occupancy Prediction",
-        "Trajectory Prediction",
-        "End-to-End Autonomous Driving",
-        "Vision-Language Navigation",
-        "LLM-based Reasoning for Autonomous Agents"
+        "Operating Systems",
+        "Computer Architecture",
+        "Algorithms",
+        "Data Structures",
+        "Computer Graphics",
+        "Object-Oriented Programming",
+        "Artificial Intelligence",
+        "Theory of Computation"
       ]
     }
   ],
   "work": [
     {
-      "name": "NAVER LABS",
-      "position": "Research Intern – Robot & AD Localization",
-      "url": "https://www.naverlabs.com/",
-      "startDate": "2024-09-01",
-      "endDate": "2025-03-01",
-      "summary": "Worked on real-time 3D occupancy prediction for autonomous driving. Developed StreamOcc, an ECCV 2026 accepted efficient voxel-based method achieving state-of-the-art performance with reduced latency and memory usage.",
+      "name": "KakaoMobility",
+      "position": "Planner Developer – Autonomous Driving Development Team",
+      "url": "https://www.kakaomobility.com/",
+      "location": "Gyeonggi-do, South Korea",
+      "startDate": "2026-04-01",
+      "summary": "Developing planning algorithms for real-vehicle autonomous driving.",
       "highlights": [
-        "Designed StreamOcc, an efficient yet effective 3D occupancy prediction model.",
-        "Achieved real-time performance while reducing memory usage.",
-        "Resulting work accepted to ECCV 2026."
+        "Developing planning algorithms that transform perception, prediction, map, and vehicle-state inputs into safe and natural autonomous driving behavior and trajectories.",
+        "Analyzing scenario-level failures and improving behavior decision, trajectory generation, real-time integration, and verification logic for real-vehicle deployment."
       ]
     },
     {
-      "name": "42dot.",
-      "position": "Research Intern – Motion Prediction",
+      "name": "NAVER LABS",
+      "position": "Research Intern – Robot & AD Localization",
+      "url": "https://www.naverlabs.com/",
+      "location": "Gyeonggi-do, South Korea",
+      "startDate": "2024-09-01",
+      "endDate": "2025-03-01",
+      "summary": "Led a streaming 3D occupancy prediction project for camera-based 3D scene understanding (StreamOcc, ECCV 2026).",
+      "highlights": [
+        "Defined the latency, memory, and coordinate-alignment issues in multi-frame fusion.",
+        "Designed stream-based voxel aggregation and query-guided refinement to preserve dense spatial representations while improving real-time efficiency and dynamic-object modeling."
+      ]
+    },
+    {
+      "name": "42dot",
+      "position": "Research Intern – Motion Prediction Team",
       "url": "https://www.42dot.ai/",
+      "location": "Seoul, South Korea",
       "startDate": "2022-08-01",
       "endDate": "2022-12-01",
-      "summary": "Explored agent interaction modeling and future-guided supervision in trajectory prediction tasks for autonomous driving.",
+      "summary": "Developed interaction-aware trajectory prediction models for multi-agent intersection scenarios.",
       "highlights": [
-        "Developed future-aware distillation for multi-agent trajectory prediction.",
-        "Introduced Lane-guided Attention Module (LAM) for goal-directed reasoning.",
-        "Published work at ICPR 2024."
+        "Designed a future-aware teacher-student distillation framework that transfers interaction knowledge from privileged future observations to an efficient inference-time model.",
+        "Published at ICPR 2024 and the CVPR 2023 Workshop on Vision-Centric Autonomous Driving."
+      ]
+    },
+    {
+      "name": "Korea University",
+      "position": "Teaching Assistant",
+      "url": "https://www.korea.ac.kr",
+      "location": "Seoul, South Korea",
+      "startDate": "2022-09-01",
+      "endDate": "2024-06-01",
+      "summary": "Teaching assistant for undergraduate computer science courses.",
+      "highlights": [
+        "Algorithm (COSE214), Fall 2022 and Fall 2023",
+        "Mathematics for Computer Science (COSE111), Spring 2024"
       ]
     },
     {
       "name": "Korea Univ. Vision & AI Lab",
-      "position": "Intern",
+      "position": "Research Intern",
       "url": "https://visionai.korea.ac.kr/",
+      "location": "Seoul, South Korea",
       "startDate": "2022-01-01",
       "endDate": "2022-08-01",
-      "summary": "Worked on 3D object detection and occupancy prediction using multi-camera input.",
+      "summary": "Worked on multi-camera 3D object detection and occupancy prediction.",
       "highlights": [
-        "Implemented ORA3D, a multi-view 3D detection model.",
-        "Tackled the occupancy prediction challenge with Waymo Open Dataset."
+        "Worked on ORA3D and Waymo occupancy-challenge baselines.",
+        "Built perception data processing and evaluation pipelines for 3D detection and occupancy prediction experiments."
       ]
     },
     {
       "name": "Samsung Electronics",
       "position": "Intern – Face Detection Project",
       "url": "https://www.samsung.com/",
+      "location": "Gyeonggi-do, South Korea",
       "startDate": "2021-03-01",
       "endDate": "2021-06-01",
-      "summary": "Contributed to attention-based face detection and dataset construction.",
+      "summary": "Implemented an attention-based few-shot face detection algorithm for limited-data settings.",
       "highlights": [
-        "Implemented few-shot face detection algorithm with attention mechanism.",
-        "Designed and augmented a large-scale face dataset pipeline."
+        "Built and curated a face dataset and designed augmentation pipelines covering scale, crop, color, and blur variations."
       ]
     }
   ],
   "publications": [
     {
+      "name": "RECAST: Recasting Vision-Language Semantics into an Actionable Cost Map for Robot Navigation",
+      "publisher": "Incheol Cho*, Jintae Park*, Jinkyu Kim, Jungbeom Lee, Jaegul Choo†, Seokha Moon† <br><br>arXiv Preprint",
+      "releaseDate": "2026",
+      "url": "https://arxiv.org/abs/2609.32595",
+      "summary": "A robot navigation framework that combines the reasoning of a vision-language model with the spatial grounding of vision foundation models to build an actionable cost map, judging which surfaces are traversable, which objects pose a risk, which heading to prefer, and which gaps are passable."
+    },
+    {
+      "name": "Causality-Aware End-to-End Autonomous Driving via Ego-Centric Joint Scene Modeling",
+      "publisher": "Seokha Moon, Minseung Lee, Joon Seo, Jinkyu Kim, Jungbeom Lee <br><br>arXiv Preprint",
+      "releaseDate": "2026",
+      "url": "https://arxiv.org/abs/2605.13646",
+      "summary": "An end-to-end autonomous driving framework that jointly learns the ego vehicle and interaction-relevant agents, then improves the ego driving policy with closed-loop reinforcement learning."
+    },
+    {
+      "name": "ALIGN: Advanced Query Initialization with LiDAR-Image Guidance for Occlusion-Robust 3D Object Detection",
+      "publisher": "Janghyun Baek, Mincheol Chang, Seokha Moon, Seung Joon Lee, Jinkyu Kim <br><br>arXiv Preprint",
+      "releaseDate": "2026",
+      "url": "https://arxiv.org/abs/2512.18187",
+      "summary": "An object-aware, LiDAR–image guided query initialization strategy that significantly improves detection of occluded and crowded objects without modifying detector architectures."
+    },
+    {
       "name": "Image-Guided Semantic Pseudo-LiDAR Point Generation for 3D Object Detection",
       "publisher": "Minseung Lee, Seokha Moon, Seung Joon Lee, Reza Mahjourian, Jinkyu Kim <br><br>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
       "releaseDate": "2026",
       "url": "https://arxiv.org/abs/2409.14985",
-      "summary": "Proposes an image-guided pseudo-LiDAR point generation method that improves 3D object detection for sparse and distant objects while reducing false positives."
-    },
-    {
-      "name": "SUPER-AD: Semantic Uncertainty-aware Planning for End-to-End Robust Autonomous Driving",
-      "publisher": "Wonjeong Ryu, Seungjun Yu, Seokha Moon, Hojun Choi, Junsung Park, Jinkyu Kim, Hyunjung Shim <br><br>arXiv Preprint",
-      "releaseDate": "2025",
-      "url": "https://arxiv.org/abs/2511.22865",
-      "summary": "SUPER-AD introduces uncertainty-aware BEV planning with lane-following priors for safer and more robust camera-only end-to-end autonomous driving."
+      "summary": "An image-guided pseudo-LiDAR point generation method that improves 3D object detection for sparse and distant objects while reducing false positives."
     },
     {
       "name": "Streaming Dense Voxel Representations for 3D Occupancy Prediction",
       "publisher": "Seokha Moon, Janghyun Baek, Yujin Jeong, Daewon Chae, Giseop Kim, Jungbeom Lee, Jinkyu Kim, Sunwook Choi <br><br>European Conference on Computer Vision (ECCV)",
       "releaseDate": "2026",
       "url": "https://arxiv.org/abs/2503.22087",
-      "summary": "StreamOcc introduces an efficient 3D occupancy prediction model that maintains dense voxel representations via streaming accumulation and query-guided dynamic-object refinement."
+      "summary": "StreamOcc, a dense voxel streaming framework for accurate and efficient 3D occupancy prediction, reducing warping artifacts while selectively injecting instance-level query features into occupied voxel regions. Work done during an internship at NAVER LABS."
     },
     {
-      "name": "VisionTrap: Vision-Augmented Trajectory Prediction Guided by Textual Descriptions",
-      "publisher": "Seokha Moon, Hyun Woo, Hongbeen Park, Haeji Jung, Reza Mahjourian, Hyung-gun Chi, Hyerin Lim, Sangpil Kim, Jinkyu Kim <br><br>European Conference on Computer Vision (ECCV)",
-      "releaseDate": "2024",
-      "url": "https://arxiv.org/abs/2407.12345",
-      "summary": "VisionTrap leverages vision-language supervision to enhance trajectory prediction by guiding the model on what to focus on for better understanding of agent behavior."
+      "name": "SUPER-AD: Semantic Uncertainty-aware Planning for End-to-End Robust Autonomous Driving",
+      "publisher": "Wonjeong Ryu, Seungjun Yu, Seokha Moon, Hojun Choi, Junsung Park, Jinkyu Kim, Hyunjung Shim <br><br>arXiv Preprint",
+      "releaseDate": "2025",
+      "url": "https://arxiv.org/abs/2511.22865",
+      "summary": "Uncertainty-aware BEV planning with lane-following priors for safer and more robust camera-only end-to-end autonomous driving."
     },
     {
       "name": "Who Should Have Been Focused: Transferring Attention-based Knowledge from Future Observations for Trajectory Prediction",
       "publisher": "Seokha Moon, Kyuhwan Yeon, Hayoung Kim, Seong-Gyun Jeong, Jinkyu Kim <br><br>International Conference on Pattern Recognition (ICPR)",
       "releaseDate": "2024",
       "url": "https://link.springer.com/chapter/10.1007/978-3-031-78447-7_23",
-      "summary": "Proposes an attention-guided knowledge distillation framework that uses future observations to help the model attend to the most relevant agents during trajectory prediction."
+      "summary": "An attention-based teacher–student method that distills future-aware interaction knowledge to improve multi-agent trajectory prediction."
+    },
+    {
+      "name": "VisionTrap: Vision-Augmented Trajectory Prediction Guided by Textual Descriptions",
+      "publisher": "Seokha Moon, Hyun Woo, Hongbeen Park, Haeji Jung, Reza Mahjourian, Hyung-gun Chi, Hyerin Lim, Sangpil Kim, Jinkyu Kim <br><br>European Conference on Computer Vision (ECCV)",
+      "releaseDate": "2024",
+      "url": "https://arxiv.org/abs/2407.12345",
+      "summary": "Incorporates visual features from surround-view cameras and VLM-generated textual descriptions as supervision for trajectory prediction."
     },
     {
       "name": "Learning Temporal Cues by Predicting Objects Move for Multi-camera 3D Object Detection",
       "publisher": "Seokha Moon, Hongbeen Park, Jungphil Kwon, Jaekoo Lee, Jinkyu Kim <br><br>IEEE International Conference on Robotics and Automation (ICRA)",
       "releaseDate": "2024",
       "url": "https://arxiv.org/abs/2404.01580",
-      "summary": "Introduces the Detection After Prediction (DAP) strategy that uses motion prediction as an auxiliary task to help learn temporal cues for 3D object detection from multi-camera input."
+      "summary": "A Detection After Prediction (DAP) method that explicitly learns temporal cues for multi-camera 3D object detection."
     },
     {
       "name": "BEVMap: Map-Aware BEV Modeling for 3D Perception",
       "publisher": "Mincheol Chang, Seokha Moon, Reza Mahjourian, Jinkyu Kim <br><br>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
       "releaseDate": "2024",
       "url": "https://openaccess.thecvf.com/content/WACV2024/html/Chang_BEVMap_Map-Aware_BEV_Modeling_for_3D_Perception_WACV_2024_paper.html",
-      "summary": "Proposes a map-aware BEV representation that improves 3D perception by incorporating spatial priors from HD maps and camera-map projection alignment."
+      "summary": "Map-aware BEV modeling that incorporates map priors into 3D perception."
     },
     {
-      "name": "RUFI: Reducing Uncertainty in behavior prediction with Future Information",
+      "name": "Enhancing Trajectory Prediction Accuracy with Goal Location and Lane Information",
+      "publisher": "Seokha Moon, Jinkyu Kim <br><br>Conference on The Institute of Electronics and Information Engineers (IEIE), Oral",
+      "releaseDate": "2023",
+      "url": "",
+      "summary": "Predicts the goal location and interacts with lane information to navigate towards the predicted goal."
+    },
+    {
+      "name": "RUFI: Reducing Uncertainty in Behavior Prediction with Future Information",
       "publisher": "Seokha Moon, Sejeong Lee, Hyun Woo, Kyuhwan Yeon, Hayoung Kim, Seong-Gyun Jeong, Jinkyu Kim <br><br>CVPR Workshop on Vision-Centric Autonomous Driving (VCAD)",
       "releaseDate": "2023",
       "url": "",
-      "summary": "RUFI improves behavior prediction by leveraging future information as privileged knowledge to reduce trajectory uncertainty during training."
+      "summary": "Reduces uncertainty in behavior prediction by leveraging future information during training."
     },
     {
       "name": "ORA3D: Overlap Region Aware Multi-view 3D Object Detection",
       "publisher": "Wonseok Roh, Gyusam Chang, Seokha Moon, Giljoo Nam, Chanyoung Kim, Younghyun Kim, Jinkyu Kim, Sangpil Kim <br><br>British Machine Vision Conference (BMVC)",
       "releaseDate": "2022",
       "url": "https://arxiv.org/abs/2207.00865",
-      "summary": "ORA3D addresses performance drops in overlapping camera views by applying weak depth supervision and feature alignment across overlapping regions."
+      "summary": "Overlap-region-aware multi-view 3D object detection."
     }
   ],
   "awards": [
@@ -180,6 +226,47 @@
       "date": "2020-11-01",
       "awarder": "Talent Development Foundation",
       "summary": "Awarded for academic excellence and potential in technology research."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "icon": "fa-solid fa-code",
+      "keywords": [
+        "Python",
+        "C++",
+        "C",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Frameworks & Tools",
+      "icon": "fa-solid fa-screwdriver-wrench",
+      "keywords": [
+        "PyTorch",
+        "OpenCV",
+        "TensorFlow",
+        "CUDA",
+        "ROS2",
+        "Linux",
+        "Git",
+        "LaTeX"
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Autonomous Driving and Robotics",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Camera-based 3D Object Detection",
+        "3D Occupancy Prediction",
+        "Trajectory Prediction",
+        "End-to-End Planning",
+        "Closed-loop Reinforcement Learning",
+        "Vision-Language-Action (VLA) Models",
+        "Vision-Language Robot Navigation"
+      ]
     }
   ]
 }
